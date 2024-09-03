@@ -8,6 +8,7 @@ import AlanFears5 from '../assets/image/AlanFears5.png';
 import CarstenBeck1 from '../assets/image/CarstenBeck1.png';
 import CarstenBeck2 from '../assets/image/CarstenBeck2.png';
 import AndersSCRMNMeisner1 from '../assets/image/AndersSCRMNMeisner1.png';
+import AndersSCRMNMeisner2 from '../assets/image/AndersSCRMNMeisner2.png';
 import EddieMartinez1 from '../assets/image/EddieMartinez1.png';
 import EddieMartinez2 from '../assets/image/EddieMartinez2.png';
 import DennisOsadebe1 from '../assets/image/DennisOsadebe1.png'
@@ -20,6 +21,7 @@ import FayeWeiWei1 from '../assets/image/FayeWeiWei1.png'
 import FayeWeiWei2 from '../assets/image/FayeWeiWei2.png'
 import JoachimBandau1 from '../assets/image/JoachimBandau1.png'
 import JoachimBandau2 from '../assets/image/JoachimBandau2.png'
+import Category from '@/components/Category';
 const MainSlide = [
     {
         id: 1,
@@ -86,7 +88,6 @@ const JoachimBandau = {
 }
 const artists = [AlanFears, CarstenBeck, 
     AndersSCRMNMeisner, EddieMartinez, DennisOsadebe ,CharmingBaker, AyakoOkuda,FayeWeiWei,JoachimBandau];
-console.log(artists, '아티스트들');
 const datas = [
     {
         id: 1,
@@ -97,6 +98,8 @@ const datas = [
         frame: 'not included',
         materials: 'Acrylic on Canvas',
         rarity: 'Unique',
+        release:2019,
+        category:'painting',
         artist: AlanFears,
     },
     {
@@ -108,6 +111,8 @@ const datas = [
         frame: 'not included',
         materials: 'Acrylic on Canvas',
         rarity: 'Unique',
+        release:2020,
+        category:'painting',
         artist: AlanFears,
     },
     {
@@ -119,6 +124,8 @@ const datas = [
         frame: 'not included',
         materials: 'Acrylic on Canvas',
         rarity: 'Unique',
+        release:2021,
+        category:'painting',
         artist: AlanFears,
     },
     {
@@ -130,6 +137,8 @@ const datas = [
         frame: 'not included',
         materials: 'Acrylic on Canvas',
         rarity: 'Unique',
+        release:2022,
+        category:'painting',
         artist: AlanFears,
     },
     {
@@ -141,28 +150,34 @@ const datas = [
         frame: 'not included',
         materials: 'Acrylic on Canvas',
         rarity: 'Unique',
+        release:2020,
+        category:'painting',
         artist: AlanFears,
     },
     {
         id: 6,
-        title: 'Alone Together, 2020',
+        title: 'Konstruktion BC.01, 2023',
         price: 9320000,
         size: '43 3/10 × 51 1/5 × 1 3/5 in | 110 × 130 × 4 cm',
         src: CarstenBeck1,
         frame: 'included',
         materials: 'Oil on canvas',
         rarity: 'Unique',
+        release:2023,
+        category:'painting',
         artist: CarstenBeck,
     },
     {
         id: 7,
-        title: 'Alone Together, 2020',
+        title: 'Entre, 2022',
         price: 9330000,
         size: '43 3/10 × 51 1/5 × 1 3/5 in | 110 × 130 × 4 cm',
         src: CarstenBeck2,
         frame: 'included',
         materials: 'Oil on linen',
         rarity: 'Unique',
+        release:2022,
+        category:'painting',
         artist: CarstenBeck,
     },
     {
@@ -174,6 +189,8 @@ const datas = [
         frame: 'not included',
         materials: 'Acrylic on canvas',
         rarity: 'Unique',
+        release:2024,
+        category:'painting',
         artist: AndersSCRMNMeisner,
     },
     {
@@ -181,25 +198,16 @@ const datas = [
         title: 'Freshwater Pearl Pose, 2022',
         price: 7400000,
         size: '59 1/10 × 74 4/5 in | 150 × 190 cm',
-        src: AndersSCRMNMeisner1,
+        src: AndersSCRMNMeisner2,
         frame: 'not included',
         materials: 'Oil on canvas',
         rarity: 'Unique',
+        release:2022,
+        category:'painting',
         artist: AndersSCRMNMeisner,
     },
     {
         id: 10,
-        title: 'Liberté Toujours, 2024',
-        price: 15700000,
-        size: '41 3/10 × 35 2/5 in | 105 × 90 cm',
-        src: AndersSCRMNMeisner1,
-        frame: 'not included',
-        materials: 'Acrylic on canvas',
-        rarity: 'Unique',
-        artist: AndersSCRMNMeisner,
-    },
-    {
-        id: 11,
         title: 'Bufly (GPBF), 2022',
         price: 7261000,
         size: '29 9/10 × 23 3/5 in | 76 × 60 cm',
@@ -207,10 +215,12 @@ const datas = [
         frame: 'not included',
         materials: 'Screenprint on Arches BFK White 300gsm',
         rarity: 'Limited edition',
+        release:2022,
+        category:'painting',
         artist: EddieMartinez,
     },
     {
-        id: 12,
+        id: 11,
         title: 'Two Untitled Drawings, Circa 2009',
         price: 3213000,
         size: '5 × 8 in | 12.7 × 20.3 cm',
@@ -218,10 +228,12 @@ const datas = [
         frame: 'not included',
         materials: 'Felt tip pen on paper',
         rarity: 'Unique',
+        release:2009,
+        category:'painting',
         artist: EddieMartinez,
     },
     {
-        id: 13,
+        id: 12,
         title: 'Connection, 2021',
         price: 3213000,
         size: '30 × 46 7/10 in | 76.2 × 118.6 cm',
@@ -229,10 +241,12 @@ const datas = [
         frame: 'not included',
         materials: 'Archival pigment ink, acrylic on canvas',
         rarity: 'Unique',
+        release:2021,
+        category:'painting',
         artist: DennisOsadebe,
     },
     {
-        id: 14,
+        id: 13,
         title: 'Dream Sequence ( White Tee), 2019',
         price: 2213000,
         size: '24 × 24 in | 61 × 61 cm',
@@ -240,10 +254,12 @@ const datas = [
         frame: 'not included',
         materials: 'Giclee Somerset Velvet Fine Art Paper',
         rarity: 'Limited edition',
+        release:2019,
+        category:'painting',
         artist: DennisOsadebe,
     },
     {
-        id: 15,
+        id: 14,
         title: 'Untitled, 2005',
         price: 2213000,
         size: '26 × 32 3/10 in | 66 × 82 cm',
@@ -251,10 +267,12 @@ const datas = [
         frame: 'included',
         materials: 'Oil on canvas',
         rarity: 'Unique',
+        release:2005,
+        category:'painting',
         artist: CharmingBaker,
     },
     {
-        id: 16,
+        id: 15,
         title: 'BEAUTIFUL PUSSY, 2023',
         price: 351000,
         size: '7 7/10 × 5 9/10 in | 19.5 × 15 cm',
@@ -262,10 +280,12 @@ const datas = [
         frame: 'included',
         materials: 'Archival Inkjet on Somerset Satin 330gsm Paper',
         rarity: 'Limited edition',
+        release:2023,
+        category:'painting',
         artist: CharmingBaker,
     },
     {
-        id: 17,
+        id: 16,
         title: 'Untiled, 2022',
         price: 1740000,
         size: '23 9/10 × 28 3/5 in | 60.6 × 72.7 cm',
@@ -273,10 +293,12 @@ const datas = [
         frame: 'included',
         materials: 'Oil on canvas',
         rarity: 'Unique',
+        release:2022,
+        category:'painting',
         artist: AyakoOkuda,
     },
     {
-        id: 18,
+        id: 17,
         title: 'Untitled, 2021',
         price: 1340000,
         size: '20 9/10 × 20 9/10 in | 53 × 53 cm',
@@ -284,10 +306,12 @@ const datas = [
         frame: 'included',
         materials: 'Oil on canvas',
         rarity: 'Unique',
+        release:2021,
+        category:'painting',
         artist: AyakoOkuda,
     },
     {
-        id: 19,
+        id: 18,
         title: 'Robbie, 2024',
         price: 1480000,
         size: '9 4/5 × 7 3/10 in | 25 × 18.5 cm',
@@ -295,6 +319,8 @@ const datas = [
         frame: 'included',
         materials: 'Oil and watercolour on paper',
         rarity: 'Unique',
+        release:2024,
+        category:'painting',
         artist: FayeWeiWei,
     },
     {
@@ -306,41 +332,12 @@ const datas = [
         frame: 'Not included',
         materials: 'Oil and watercolour on paper',
         rarity: 'Unique',
+        release:2022,
+        category:'painting',
         artist: FayeWeiWei,
     },
-    {
-        id: 20,
-        title: 'Q 19 (20/6/2014), 2014',
-        price: 13290000,
-        size: '29 9/10 × 22 in | 76 × 56 cm',
-        src:  JoachimBandau1,
-        frame: 'Not included',
-        materials: 'Watercolor on handmade paper',
-        rarity: 'Unique',
-        artist: JoachimBandau,
-    },
-    {
-        id: 20,
-        title: 'Q 19 (20/6/2014), 2014',
-        price: 13290000,
-        size: '29 9/10 × 22 in | 76 × 56 cm',
-        src:  JoachimBandau1,
-        frame: 'Not included',
-        materials: 'Watercolor on handmade paper',
-        rarity: 'Unique',
-        artist: JoachimBandau,
-    },
-    {
-        id: 21,
-        title: 'untitled, 1. August 2014, 2014',
-        price: 14816000,
-        size: '39 2/5 × 27 3/5 in | 100 × 70 cm',
-        src:  JoachimBandau2,
-        frame: 'Not included',
-        materials: 'Watercolor on hand made paper (Fabriano Artistico)',
-        rarity: 'Unique',
-        artist: JoachimBandau,
-    },
+
+
 ];
 
 export { MainSlide, artists, datas };
