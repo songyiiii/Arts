@@ -1,4 +1,5 @@
 
+import React, { useEffect } from 'react';
 import Header from '@/features/Header';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
