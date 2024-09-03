@@ -19,7 +19,7 @@ const MainArtistsName = React.forwardRef<HTMLDivElement, MainArtistsNameProps>(
         const router = useRouter();
         const handleClick = (artistName: string) => {
             // 아티스트 이름을 클릭했을 때 이동할 페이지 설정
-            router.push(`/artists/${artistName}`);
+            router.push(`/artist/${artistName}`);
         };
     return (
         <MainAristNameStyled ref={ref}>

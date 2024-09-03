@@ -2,25 +2,48 @@ import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
     .nav {
-        width: 100%;
-        height: 60px; /* Header 높이 설정 */
-        background-color: black;
-        color: white;
-        z-index: 10; /* 다른 요소들보다 위에 오도록 z-index 설정 */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 20px;
+        padding:20px 20px;
         .logo {
-            width: 20%;
+            h1 {
+                font-size: 2.2rem;
+            }
         }
         .menu {
-            width: 80%;
-            display: flex;
+            div {
+                font-size: 1.5rem;
+            }
         }
-        div {
-            margin: 10px 40px;
+    }
+    @media screen and (min-width: 769px) {
+        .nav {
+            width: 100%;
+            z-index: 10; /* 다른 요소들보다 위에 오도록 z-index 설정 */
+            .logo {
+                width: 20%;
+            }
+            .menu {
+                width: 80%;
+                display: flex;
+            }
+            div {
+                margin: 0px 40px;
+                cursor: pointer;
+            }
+            .mobileIcon {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .mobileIcon {
+            display: flex;
             cursor: pointer;
+        }
+        .menu {
+            display: none ;
         }
     }
 `;
