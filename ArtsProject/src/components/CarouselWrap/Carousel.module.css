@@ -1,0 +1,43 @@
+
+.swiper {
+background-color: balck;
+overflow: hidden;
+width: 90%;
+height: 90vh;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease; 
+}
+
+.content {
+width: 100%;
+position: relative;
+
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 20px;
+  font-size: 2rem;
+}
+.swiper-slide-active{
+transform: scale(2) !important;
+}

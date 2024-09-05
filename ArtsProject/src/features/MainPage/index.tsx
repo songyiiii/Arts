@@ -1,8 +1,12 @@
-import CarouselWrap from '@/components/CarouselWrap';
+
 import { MainPageStyled } from './styled';
 import React, { useEffect,useRef } from 'react';
 import MainArtists from '@/components/MainArtists';
-import CardWrap from '@/components/CardWrap';
+import CarouselWrap from '@/components/CarouselWrap';
+import { CardList } from '@/components/CardList';
+
+
+
 
 
 
@@ -12,7 +16,7 @@ const MainPage = () => {
         <MainPageStyled>
             <CarouselWrap  />
             <MainArtists />
-            <CardWrap />
+            <CardList />
         </MainPageStyled>
     );
 };

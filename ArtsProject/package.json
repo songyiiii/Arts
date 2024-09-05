@@ -22,7 +22,8 @@
     "react-intersection-observer": "^9.13.0",
     "react-scroll-motion": "^0.3.3",
     "redux": "^5.0.1",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.12",
+    "swiper": "^11.1.12"
   },
   "devDependencies": {
     "@types/node": "^20",

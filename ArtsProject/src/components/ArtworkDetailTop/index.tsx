@@ -28,7 +28,6 @@ const ArtworkDetailTop = ({artwork}:artworkProps) => {
                     <p>{artwork.title}</p>
                     <p>{artwork.materials}</p>
                     <p>{artwork.size}</p>
-                    <p>{artwork.frame}</p>
                     <p>{artwork.price.toLocaleString()}</p>
                 </div>
                 <div className='btnBox'>
