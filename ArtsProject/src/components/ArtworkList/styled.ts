@@ -4,11 +4,10 @@ export const ArtworkListStyled = styled.div`
 display: grid;
 justify-content: space-around;
 flex-wrap: wrap;
-padding-top: 50px;
 gap: 20px; 
 text-align: center;
-width: 95%;
-margin: auto;
+margin-top: 80px;
+
 
 @media screen and (max-width: 480px) {
     grid-template-columns: repeat(1, 1fr);

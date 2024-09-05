@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
+position: fixed;
+top: 0;
+left: 0;
+z-index: 10000;
+background-color: white;
+width: 100%;
     .nav {
+        
         display: flex;
         align-items: center;
         justify-content: space-between;

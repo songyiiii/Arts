@@ -9,5 +9,7 @@ export const MainAristImgStyled = styled.div`
     img {
         width: 100%;
         cursor: pointer;
+        opacity: 0; /* 기본 상태에서 이미지를 숨김 */
+        transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
     }
 `;

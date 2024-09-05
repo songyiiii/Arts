@@ -1,6 +1,8 @@
+import MainArtists from "@/components/MainArtists"
+import { ArtistsStyled } from "./styled"
+import Artists from "@/components/Artists"
+
 const artistspage = () => {
-    return(<>
-        아티스트소개페이지입니다
-    </>)
+    return(<Artists />)
 }
 export default artistspage

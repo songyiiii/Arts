@@ -2,7 +2,7 @@ import { ArtworkDetailTopStyled } from './styled';
 
 interface artworkProps {
     artwork:{
-        artist:{name:string, info:string}
+        artist:{name:string, info:string, company:string}
         category:string
         frame:string
         id:number
@@ -26,6 +26,7 @@ const ArtworkDetailTop = ({artwork}:artworkProps) => {
                 <div className='textBox'>
                     <p>{artwork.artist.name}</p>
                     <p>{artwork.title}</p>
+                    <p>{artwork.artist.company}</p>
                     <p>{artwork.materials}</p>
                     <p>{artwork.size}</p>
                     <p>{artwork.price.toLocaleString()}</p>

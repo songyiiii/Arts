@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const FooterStyled = styled.div`
+h3 {
+    font-size: 2rem;
+    margin-right: 20px;
+}
 width: 100%;
 display: flex;
-flex-direction: column;
 justify-content: center;
 align-items: center;
-text-align: center;
-margin-top: 100px;
-border-top: 1px solid gray;
 padding: 10px;
+background-color: black;
+color: white;
 `

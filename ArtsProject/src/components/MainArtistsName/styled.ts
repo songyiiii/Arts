@@ -8,7 +8,10 @@ export const MainAristNameStyled = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border-right: 2px solid white;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera에서 스크롤바 숨기기 */
+    }
     p {
         margin-right: 30px;
         margin-bottom: 15px;

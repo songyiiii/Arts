@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const AboutStyled = styled.div`
-    width: 95%;
-    margin: auto;
+    padding: 90px 30px 200px 30px;
     .AboutTop {
         padding-top: 50px;
         margin-bottom: 100px;

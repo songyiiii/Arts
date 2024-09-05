@@ -24,42 +24,39 @@ import AndrewScott2 from '../assets/image/AndrewScott2.png';
 import AndrewScott3 from '../assets/image/AndrewScott3.png';
 import RonHicks1 from '../assets/image/RonHicks1.png';
 import RonHicks2 from '../assets/image/RonHicks2.png';
-import CaroleEisner1 from '../assets/image/CaroleEisner1.png'
-import CaroleEisner2 from '../assets/image/CaroleEisner2.png'
-import SusannahPhillips1 from '../assets/image/SusannahPhillips1.png'
-import SusannahPhillips2 from '../assets/image/SusannahPhillips2.png'
-import SusannahPhillips3 from '../assets/image/SusannahPhillips3.png'
-import SamFrancis1 from '../assets/image/SamFrancis1.png'
-import SamFrancis2 from '../assets/image/SamFrancis2.png'
-import SamFrancis3 from '../assets/image/SamFrancis3.png'
+import CaroleEisner1 from '../assets/image/CaroleEisner1.png';
+import CaroleEisner2 from '../assets/image/CaroleEisner2.png';
+import SusannahPhillips1 from '../assets/image/SusannahPhillips1.png';
+import SusannahPhillips2 from '../assets/image/SusannahPhillips2.png';
+import SusannahPhillips3 from '../assets/image/SusannahPhillips3.png';
+import SamFrancis1 from '../assets/image/SamFrancis1.png';
+import SamFrancis2 from '../assets/image/SamFrancis2.png';
+import SamFrancis3 from '../assets/image/SamFrancis3.png';
+import HyewonKim1 from '../assets/image/HyewonKim1.png';
+import HyewonKim2 from '../assets/image/HyewonKim2.png';
+import LeeSejun1 from '../assets/image/LeeSejun1.png';
+import LeeSejun2 from '../assets/image/LeeSejun2.png';
+import LeeSejun3 from '../assets/image/LeeSejun3.png';
+import ChangSungeun1 from '../assets/image/ChangSungeun1.png';
+import ChangSungeun2 from '../assets/image/ChangSungeun2.png';
+import ChangSungeun3 from '../assets/image/ChangSungeun3.png';
+import JihyunIm1 from '../assets/image/JihyunIm1.png';
+import JihyunIm2 from '../assets/image/JihyunIm2.png';
+import JihyunIm3 from '../assets/image/JihyunIm3.png';
+import InKyungKwon1 from '../assets/image/InKyungKwon1.png';
+import InKyungKwon2 from '../assets/image/InKyungKwon2.png';
+import InKyungKwon3 from '../assets/image/InKyungKwon3.png';
+import LeeKiyoung1 from '../assets/image/LeeKiyoung1.png'
+import JungJungyeob1 from '../assets/image/JungJungyeob1.png'
+import JungJungyeob2 from '../assets/image/JungJungyeob2.png'
+import JungJungyeob3 from '../assets/image/JungJungyeob3.png'
+import ItsukiKaito1 from '../assets/image/ItsukiKaito1.png'
+import ItsukiKaito2 from '../assets/image/ItsukiKaito2.png'
+import ItsukiKaito3 from '../assets/image/ItsukiKaito3.png'
 
-const MainSlide = [
-    {
-        id: 1,
-        name: 'slide1',
-        src: slide1,
-    },
-    {
-        id: 2,
-        name: 'slide2',
-        src: slide2,
-    },
-    {
-        id: 3,
-        name: 'slide3',
-        src: slide1,
-    },
-    {
-        id: 4,
-        name: 'slide4',
-        src: slide2,
-    },
-    {
-        id: 5,
-        name: 'slide5',
-        src: slide1,
-    },
-];
+
+const gallery1 = { name: 'SPACE Willing N Dealing' };
+const gallery2 = { name: 'GalleryMEME' };
 
 const AlanFears = {
     name: 'Alan Fears',
@@ -109,13 +106,55 @@ const CaroleEisner = {
     info: '캐럴 아이스너는 공공 야외 공간에 자리 잡은 대규모의 기념비적인 조각품으로 가장 잘 알려져 있습니다. 공원, 박물관, 해안가 등에서 아이스너의 조각품은 주변 환경의 공간과 자연광에 참여하는데, 이는 종종 래커 처리된 금속에 반사됩니다. 아이스너는 녹슨 재활용 강철과 오래된 다리 조각품과 같은 발견된 물건에서 얻은 재료를 사용하여 재조립하고 새로운 형태로 용접합니다. 아이스너는 모든 소규모 또는 대규모 조각품에서 철, 강철 및 다양한 폐금속을 꼬아서 추상적이고 우아한 형태로 재구성하여 재료의 가단성을 탐구합니다. 이 모든 작업은 용접 토치를 사용합니다. 아이스너는 코네티컷주 웨스턴에 있는 자택에 딸린 스튜디오에서 작업하지만, 웨스턴과 뉴욕 시를 오가며 시간을 보내고 평생 뉴욕 사람이라고 자신을 정의합니다.',
 };
 const SusannahPhillips = {
-    name:'Susannah Phillips',
-    info:'수잔나 필립스는 사실주의자 윌리엄 콜드스트림과 유안 우글로우 의 지도를 받았지만, 추상 표현주의 도 자신의 작업에 영향을 준 것으로 인용했습니다. 그녀는 구상과 추상을 혼합한 그림을 만듭니다. 필립스는 정물화, 실내, 초상화와 같이 회화의 역사에 친숙한 주제를 선택하지만, 넓은 붓놀림과 윤곽선의 이미지를 평평하게 하는 조합으로 이를 표현합니다. 필립스는 또한 제한된 색상 팔레트를 사용하여 빛과 색조의 차이를 불러일으키는 능력으로 유명합니다. 주로 회색과 중성색을 사용하며, 가끔 악센트 색상을 사용합니다. 그녀는 비슷한 생각을 가진 화가 그레이엄 닉슨, 로버트 벌린드 , 네오 라우흐 와 함께 작품을 전시했습니다 .'
-}
+    name: 'Susannah Phillips',
+    info: '수잔나 필립스는 사실주의자 윌리엄 콜드스트림과 유안 우글로우 의 지도를 받았지만, 추상 표현주의 도 자신의 작업에 영향을 준 것으로 인용했습니다. 그녀는 구상과 추상을 혼합한 그림을 만듭니다. 필립스는 정물화, 실내, 초상화와 같이 회화의 역사에 친숙한 주제를 선택하지만, 넓은 붓놀림과 윤곽선의 이미지를 평평하게 하는 조합으로 이를 표현합니다. 필립스는 또한 제한된 색상 팔레트를 사용하여 빛과 색조의 차이를 불러일으키는 능력으로 유명합니다. 주로 회색과 중성색을 사용하며, 가끔 악센트 색상을 사용합니다. 그녀는 비슷한 생각을 가진 화가 그레이엄 닉슨, 로버트 벌린드 , 네오 라우흐 와 함께 작품을 전시했습니다 .',
+};
 const SamFrancis = {
-    name:'Sam Francis',
-    info:'추상 표현주의 예술가 샘 프랜시스는 캔버스의 일부를 물감으로 튀기고 떨어뜨려, 덮이지 않은 빛나는 공허함을 강조했습니다.생동감 있는 색상 팔레트와 엄격한 흰색 패치 간의 이러한 대조는 공간, 색상 및 빛의 관계를 강조했습니다.프랜시스는 평생 동안 널리 여행하며 클로드 모네 의 "수련"에서 융 심리학과 일본 선불교의 미학에 이르기까지 다양한 영향에서 영감을 얻었습니다.그는 주요 기관에서 수십 개의 전시회를 가졌으며 1964년에는 제32회 베니스 비엔날레와 도큐멘타 3에 참여했습니다.오늘날 프랜시스는 퐁피두 센터 , 메트로폴리탄 미술관 , 바젤 미술관 등의 영구 컬렉션에 소장되어 있습니다.2차 시장에서 그의 작품은 종종 7자리 수의 가격을 차지합니다.'
+    name: 'Sam Francis',
+    info: '추상 표현주의 예술가 샘 프랜시스는 캔버스의 일부를 물감으로 튀기고 떨어뜨려, 덮이지 않은 빛나는 공허함을 강조했습니다.생동감 있는 색상 팔레트와 엄격한 흰색 패치 간의 이러한 대조는 공간, 색상 및 빛의 관계를 강조했습니다.프랜시스는 평생 동안 널리 여행하며 클로드 모네 의 "수련"에서 융 심리학과 일본 선불교의 미학에 이르기까지 다양한 영향에서 영감을 얻었습니다.그는 주요 기관에서 수십 개의 전시회를 가졌으며 1964년에는 제32회 베니스 비엔날레와 도큐멘타 3에 참여했습니다.오늘날 프랜시스는 퐁피두 센터 , 메트로폴리탄 미술관 , 바젤 미술관 등의 영구 컬렉션에 소장되어 있습니다.2차 시장에서 그의 작품은 종종 7자리 수의 가격을 차지합니다.',
+};
+const HyewonKim = {
+    name: 'Hyewon Kim',
+    gallery: gallery1,
+};
+const LeeSejun = {
+    name: 'Lee Sejun',
+    gallery: gallery1,
+};
+const ChangSungeun = {
+    name: 'Chang Sungeun',
+    information:'Korean, b. 1978',
+    gallery: gallery1,
+};
+const InKyungKwon = {
+    name: 'In Kyung Kwon',
+    information:'South Korean, b. 1979',
+    gallery: gallery2,
+    info: '권인경 작가는 오래된 책 콜라주, 먹 케이크, 아크릴 물감 등 다양한 소재를 사용하여 이질적인 차원이 뒤섞인 모호하지만 강력한 도시 풍경을 만들어낸다. 파편화된 공간 이미지와 다른 시간대의 단절된 기억에서 태어난 이 초현실적인 풍경은 모든 사람 안에 숨겨진 상상력의 회로를 활성화시켜 의식의 경계를 넘어 흐르는 환상적인 콜라주를 경험하게 한다.',
+    history: ['포스코미술관 신진작가 공모전(2016)','한국작가프로젝트(한국사립미술관협회, 2016)','서울시립미술관 신진작가 선정(2013)','송은미술상 선정작가(2007)','소장처: 국립현대미술관, 미술은행(2023, 2017, 2010, 2008), 양평군립미술관, 서울동부지검 신사옥 등']
+};
+const LeeKiyoung = {
+    name:'Lee Kiyoung',
+    information:'Korean, b. 1964',
+    gallery:gallery2,
+    info:'한국 전통 회화를 현대적 시각 언어로 재해석한 것으로 유명한 작가 이기영은 한국 종이에 시간, 행동, 생각을 겹쳐 놓는 과정을 중심으로 작업을 합니다. 이 작가는 종이에 먹물을 채우고 지우고 다시 채우는 반복적인 과정을 통해 시간과 생각의 흔적을 축적합니다. 작업의 마지막 단계는 날카로운 칼로 극도로 집중한 상태에서 복잡한 선을 새기고 이 선들을 안료로 채우는 것입니다. 처음에는 먹 케이크로 어두워진 한국 종이에 숨겨져 있던 이 깊고 강렬한 색의 선들이 미묘하게 드러나며 작품을 면밀히 살펴보게 합니다. 직사각형과 같은 기하학적 모양이 먹 케이크 배경을 초월하여 초월적이면서도 비어 있는 공간을 만들어냅니다. 인간의 삶에 대한 깊은 성찰에서 비롯된 이기영의 작품은 현대 미술에서 흔히 볼 수 없는 독특한 미학을 보여준다. 먹물과 음의 공간의 조화, 표면이 발산하는 평면성의 정점, 기하학적 선의 조합이 모두 어우러져 독특한 아름다움을 전달한다. 명상의 수행과 유사한 그들의 예술은 끝없는 지우기 행위를 통해 공허함의 미학을 제공한다.',
+    history: ['이화여자대학교 한국화학과 교수','소장품 : 국립현대미술관, 서울시립미술관, 이스라엘 한국대사관, 핀란드 한국대사관 등']
 }
+const JungJungyeob = {
+    name:'Jung Jungyeob',
+    information:'Korean, b. 1962',
+    gallery:gallery2,
+    info:'정정엽은 한국 페미니스트 미술 운동의 최전선에 있는 영향력 있는 예술가입니다. 그녀의 다양한 작품에는 그림, 설치 미술, 퍼포먼스가 포함되며, 페미니스트와 생태적 관점에 깊이 영향을 받았습니다. 그녀의 대표 컬렉션인 "팥 시리즈"는 여성의 보이지 않는 노동에 초점을 맞추고 작은 씨앗 하나하나에 담긴 지구의 활력을 포착한 것으로 호평을 받고 있습니다.정의 예술성은 캔버스를 넘어 더 광범위한 서사를 구현하는데, 이는 평범한 것(팥, 콩, 봄나물)에서 노동과 삶에 대한 논평을 끌어내는 것입니다. 그녀의 작업은 공존에 대한 지속적인 탐구이며, 일상적 존재의 실마리를 모든 생명체의 집단적 서사와 함께 엮어냅니다.',
+    history: ['2022 이중섭미술상','2020 성평등문화대상','2019 고암 이응노미술상','개인전 20여회 및 단체전 다수']
+}
+const ItsukiKaito = {
+    name:'Itsuki Kaito',
+    information: 'Japanese, b. 1993',
+    gallery:gallery2,
+    info:'카이토 이츠키는 신화 속 초월적 영웅의 존재를 해체하고 그들의 자리를 수치심과 두려움으로 채웁니다. 여성에게 더 엄격한 예절이 요구되는 일본 사회에서 그녀는 부적절하고 부도덕하며 폭력적인 이미지를 통해 우리 몸 밖에서 우리에게 부과된 사회적 역할을 묘사합니다.',
+    history:['2024 Tang Contemporary Art, 베이징: 개인전','2022 HIVE Center for Comtemporary Art, 베이징: 개인전','2021 Tang Contemporary Art Hong Kong: 전시','2022 HIVE Center for Contemporary Art, 베이징','2021 Tang Contemporary Art, 홍콩']
+}
+
 const artists = [
     AlanFears,
     CarstenBeck,
@@ -130,8 +169,16 @@ const artists = [
     RonHicks,
     CaroleEisner,
     SusannahPhillips,
-    SamFrancis
+    SamFrancis,
+    HyewonKim,
+    LeeSejun,
+    ChangSungeun,
+    InKyungKwon,
+    LeeKiyoung,
+    JungJungyeob,
+    ItsukiKaito
 ];
+
 const datas = [
     {
         id: 1,
@@ -472,7 +519,7 @@ const datas = [
         materials: 'Acrylic on canvas',
         rarity: 'Unique',
         release: 1987,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: CaroleEisner,
     },
     {
@@ -485,7 +532,7 @@ const datas = [
         materials: 'Acrylic on canvas',
         rarity: 'Unique',
         release: 1987,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: CaroleEisner,
     },
     {
@@ -498,7 +545,7 @@ const datas = [
         materials: 'Oil on linen',
         rarity: 'Unique',
         release: 1999,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: SusannahPhillips,
     },
     {
@@ -511,7 +558,7 @@ const datas = [
         materials: 'Oil on canvas',
         rarity: 'Unique',
         release: 2016,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: SusannahPhillips,
     },
     {
@@ -524,7 +571,7 @@ const datas = [
         materials: 'Oil on canvas',
         rarity: 'Unique',
         release: 2016,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: SusannahPhillips,
     },
     {
@@ -537,7 +584,7 @@ const datas = [
         materials: 'Etching',
         rarity: 'Unique',
         release: 1994,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: SamFrancis,
     },
     {
@@ -550,7 +597,7 @@ const datas = [
         materials: 'Acrylic on paper',
         rarity: 'Unique',
         release: 1982,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: SamFrancis,
     },
     {
@@ -563,9 +610,243 @@ const datas = [
         materials: 'Acrylic on paper',
         rarity: 'Unique',
         release: 1978,
-        category:  '20th-Century Art',
+        category: '20th-Century Art',
         artist: SamFrancis,
+    },
+    {
+        id: 34,
+        title: 'Interior of a mysterious bus, 2023',
+        price: 4800000,
+        size: '57 3/10 × 38 1/5 in | 145.5 × 97 cm',
+        src: HyewonKim1,
+        frame: 'Not included',
+        materials: 'Watercolor, gouache, acrylic medium on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: HyewonKim,
+    },
+    {
+        id: 35,
+        title: 'Public phones and vending machines on the platform of Sindorim station line 2, 2022',
+        price: 7200000,
+        size: '57 3/10 × 38 1/5 in | 145.5 × 97 cm',
+        src: HyewonKim2,
+        frame: 'Not included',
+        materials: 'Watercolor, gouache, acrylic medium on canvas',
+        rarity: 'Unique',
+        release: 2022,
+        category: 'painting',
+        artist: HyewonKim,
+    },
+    {
+        id: 36,
+        title: '공유하는 꿈, 2024',
+        price: 1200000,
+        size: '12 1/2 × 12 1/2 in | 31.7 × 31.7 cm',
+        src: LeeSejun1,
+        frame: 'Not included',
+        materials: 'Acrylic on linen',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'painting',
+        artist: LeeSejun,
+    },
+    {
+        id: 37,
+        title: 'Geological painting _노을인 동시에 산이면서 바람인 그림, 2024',
+        price: 1200000,
+        size: '12 1/2 × 12 1/2 in | 31.7 × 31.7 cm',
+        src: LeeSejun2,
+        frame: 'Not included',
+        materials: 'Acrylic, fluorescent pigment, mixed media on Linen',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'painting',
+        artist: LeeSejun,
+    },
+    {
+        id: 38,
+        title: '지층적 회화 _빛나는 물결, 2024',
+        price: 1200000,
+        size: '17 9/10 × 20 9/10 in | 45.5 × 53 cm',
+        src: LeeSejun3,
+        frame: 'Not included',
+        materials: 'Acrylic, fluorescent pigment on Linen',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'painting',
+        artist: LeeSejun,
+    },
+    {
+        id: 39,
+        title: 'Gentle fluctuation, 2022',
+        price: 1700000,
+        size: '29 1/2 × 39 2/5 in | 75 × 100 cm',
+        src: ChangSungeun1,
+        frame: 'Not included',
+        materials: 'Archival pigment print',
+        rarity: 'Limited edition',
+        release: 2022,
+        category: 'photography',
+        artist: ChangSungeun,
+    },
+    {
+        id: 40,
+        title: '불가능한 풍경9, 2019',
+        price: 2100000,
+        size: '10 1/2 × 15 7/10 in | 26.6 × 40 cm',
+        src: ChangSungeun2,
+        frame: 'Not included',
+        materials: 'Archival pigment print',
+        rarity: 'Limited edition',
+        release: 2019,
+        category: 'photography',
+        artist: ChangSungeun,
+    },
+    {
+        id: 41,
+        title: '불가능한 풍경5, 2019',
+        price: 2100000,
+        size: '18 9/10 × 12 3/5 in | 48 × 32 cm',
+        src: ChangSungeun3,
+        frame: 'Not included',
+        materials: 'Archival pigment print',
+        rarity: 'Limited edition',
+        release: 2019,
+        category: 'photography',
+        artist: ChangSungeun,
+    },
+    {
+        id: 42,
+        title: 'A Private room-An added memory 개인의 방 - 덧댄 기억, 2022',
+        price: 20040000,
+        size: '76 × 51 3/5 in | 193 × 131 cm',
+        src: InKyungKwon1,
+        frame: 'Not included',
+        materials: 'Mixed media on Korean paper (Acrylic, Collage, Ink cake)',
+        rarity: 'Unique',
+        release: 2022,
+        category: 'painting',
+        artist: InKyungKwon,
+    },
+    {
+        id: 43,
+        title: 'Different memories 1 서로 다른 기억들 1, 2023',
+        price: 20040000,
+        size: '76 2/5 × 51 1/5 in | 194 × 130 cm',
+        src: InKyungKwon2,
+        frame: 'included',
+        materials: 'Mixed media on Korean paper (Acrylic, Collage, Ink cake)',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: InKyungKwon,
+    },
+    {
+        id: 44,
+        title: 'A different memory, 2023',
+        price: 5345000,
+        size: '27 3/10 × 26 in | 69.3 × 66 cm',
+        src: InKyungKwon3,
+        frame: 'included',
+        materials: 'Chinese ink and Acrylic on korean paper',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: InKyungKwon,
+    },
+    {
+        id: 45,
+        title: 'Subsequent answer 3123, 2023',
+        price: 53452000,
+        size: '65 × 47 1/5 in | 165 × 120 cm',
+        src: LeeKiyoung1,
+        frame: 'included',
+        materials: 'Ink cake pigment mixed media on Korean paper',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: LeeKiyoung,
+    },
+    {
+        id: 46,
+        title: 'Sprout 5 싹 5, 2015',
+        price: 40089000,
+        size: '63 4/5 × 51 1/5 in | 162 × 130 cm',
+        src: JungJungyeob1,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2015,
+        category: 'painting',
+        artist: JungJungyeob,
+    },
+    {
+        id: 47,
+        title: 'Sprout 3 싹 3, 2015',
+        price: 40089000,
+        size: '63 4/5 × 51 1/5 in | 162 × 130 cm',
+        src: JungJungyeob2,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2015,
+        category: 'painting',
+        artist: JungJungyeob,
+    },
+    {
+        id: 48,
+        title: 'Sprout 7 싹 7, 2015',
+        price: 40089000,
+        size: '55 1/10 × 102 2/5 in | 140 × 260 cm',
+        src: JungJungyeob3,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2015,
+        category: 'painting',
+        artist: JungJungyeob,
+    },
+    {
+        id: 49,
+        title: 'Tools are validated (Nurturing a chick), 2023',
+        price: 8016000,
+        size: '20 9/10 × 17 9/10 in | 53 × 45.5 cm',
+        src: ItsukiKaito1,
+        frame: 'included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: ItsukiKaito,
+    },
+    {
+        id: 50,
+        title: 'Feeding birds (Under the light), 2023',
+        price: 6680000,
+        size: '20 9/10 × 13 1/10 in | 53 × 33.3 cm',
+        src: ItsukiKaito2,
+        frame: 'included',
+        materials: 'Oil and charcoal on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: ItsukiKaito,
+    },
+    {
+        id: 51,
+        title: 'Feeding birds (Pink machine), 2023',
+        price: 8016000,
+        size: '20 9/10 × 17 9/10 in | 53 × 45.5 cm',
+        src: ItsukiKaito3,
+        frame: 'included',
+        materials: 'Oil and charcoal on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'painting',
+        artist: ItsukiKaito,
     },
 ];
 
-export { MainSlide, artists, datas };
+export { artists, datas };

@@ -1,0 +1,56 @@
+/* ArtworkList.module.css */
+.wrap {
+    padding: 90px 30px 200px 30px;
+}
+.formBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.input {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+}
+.select {
+    border: 0;
+}
+.pagination {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.pageItem {
+    margin: 0 5px;
+}
+
+.pageLink {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pageLink:hover {
+    background-color: #f0f0f0;
+}
+
+.activePage .pageLink {
+    color: white;
+}
+
+.disabledPage .pageLink {
+    color: #ccc;
+    pointer-events: none;
+    cursor: default;
+}
+.active {
+    font-weight: bold;
+}

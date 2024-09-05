@@ -25,8 +25,8 @@ const MainArtistsName = React.forwardRef<HTMLDivElement, MainArtistsNameProps>(
         <MainAristNameStyled ref={ref}>
             {artists.map((x, i) => {
                 const isBlinking = visible[i];
-                console.log(isBlinking,'블링크확ㄱ인')
-                const animationTiming = nameAnimation(); // 랜덤 애니메이션 타이밍 생성
+                // console.log(isBlinking,'블링크확ㄱ인')
+                const animationTiming = nameAnimation(); 
                 return (
                     <p
                         key={i}

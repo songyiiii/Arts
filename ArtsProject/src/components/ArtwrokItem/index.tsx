@@ -17,7 +17,6 @@ const ArtworkItem = ({
     price,
     imgUrl,
 }: ArtworkItemProps) => {
-    // console.log(id,title,artist,price,imgUrl,'아트워크확인')
     const [position, setPosition] = useState({ x: 0, y: 0 });
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -32,7 +31,7 @@ const ArtworkItem = ({
 
     return (
         <ArtworkItemStyled>
-            <Link  href={`/artwork/${title}`}>
+            <Link  href={`/artwork/${title}`} className="customLink">
                 <div className="img">
                     <img
                         onMouseMove={handleMouseMove}
