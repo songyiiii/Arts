@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainAristNameStyled = styled.div`
     width: 50%;
-    height: 100%;
+    height: 500px;
     padding: 5px;
     animation: none;
     display: flex;

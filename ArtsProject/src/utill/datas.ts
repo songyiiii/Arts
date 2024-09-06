@@ -46,17 +46,36 @@ import JihyunIm3 from '../assets/image/JihyunIm3.png';
 import InKyungKwon1 from '../assets/image/InKyungKwon1.png';
 import InKyungKwon2 from '../assets/image/InKyungKwon2.png';
 import InKyungKwon3 from '../assets/image/InKyungKwon3.png';
-import LeeKiyoung1 from '../assets/image/LeeKiyoung1.png'
-import JungJungyeob1 from '../assets/image/JungJungyeob1.png'
-import JungJungyeob2 from '../assets/image/JungJungyeob2.png'
-import JungJungyeob3 from '../assets/image/JungJungyeob3.png'
-import ItsukiKaito1 from '../assets/image/ItsukiKaito1.png'
-import ItsukiKaito2 from '../assets/image/ItsukiKaito2.png'
-import ItsukiKaito3 from '../assets/image/ItsukiKaito3.png'
+import LeeKiyoung1 from '../assets/image/LeeKiyoung1.png';
+import JungJungyeob1 from '../assets/image/JungJungyeob1.png';
+import JungJungyeob2 from '../assets/image/JungJungyeob2.png';
+import JungJungyeob3 from '../assets/image/JungJungyeob3.png';
+import ItsukiKaito1 from '../assets/image/ItsukiKaito1.png';
+import ItsukiKaito2 from '../assets/image/ItsukiKaito2.png';
+import ItsukiKaito3 from '../assets/image/ItsukiKaito3.png';
+import ChangukBak1 from '../assets/image/ChangukBak1.png';
+import ChangukBak2 from '../assets/image/ChangukBak2.png';
+import ChangukBak3 from '../assets/image/ChangukBak3.png';
+import JungChoonpyo1 from '../assets/image/JungChoonpyo1.png';
+import JungChoonpyo2 from '../assets/image/JungChoonpyo2.png';
+import JungChoonpyo3 from '../assets/image/JungChoonpyo3.png';
+import ZikSeongJeong1 from '../assets/image/ZikSeongJeong1.png'
+import ZikSeongJeong2 from '../assets/image/JEONGZIKSEONG2.png'
+import ZikSeongJeong3 from '../assets/image/JEONGZIKSEONG3.png'
+import ZikSeongJeong4 from '../assets/image/JEONGZIKSEONG4.png'
+import ZikSeongJeong5 from '../assets/image/JEONGZIKSEONG5.png'
 
 
 const gallery1 = { name: 'SPACE Willing N Dealing' };
 const gallery2 = { name: 'GalleryMEME' };
+const gallery3 = {
+    name: 'art B project',
+    info: '다양한 아트 매개 시스템을 운영하는 아트 회사입니다. ARTS와 함께 해외에서 거의 선보이지 않았던 한국의 신진, 중견, 중견 아티스트를 소개합니다. 새로운 한국 아트를 찾고 있다면 art B project가 최고의 파트너가 될 것입니다! 한국에 거주하는 아티스트를 지원하기 위해 아티스트 에이전시를 운영합니다. 또한 한국 아티스트와 함께 개인 아트 컬렉터를 위한 아트 컨설팅, 기업과의 협업, 아트 협업 등 귀중한 프로젝트를 진행합니다.',
+};
+const gallery4 = {
+    name:'unbound',
+    info:'unbound는 다양한 예술 형식을 탐구하는 데 전념하는 창의적인 아트 랩입니다. 저희 공간은 창의성이 경계를 모르는 역동적인 허브로, 시각 예술, 디지털 예술, 음악 공연, 연극 및 멀티미디어 프로젝트에서 광범위한 예술적 표현을 선보입니다. unbound는 기존의 경계에 도전하고 아티스트와 관객 간의 견고한 관계를 구축하기 위해 프로젝트를 선택하고 큐레이팅합니다'
+}
 
 const AlanFears = {
     name: 'Alan Fears',
@@ -123,38 +142,76 @@ const LeeSejun = {
 };
 const ChangSungeun = {
     name: 'Chang Sungeun',
-    information:'Korean, b. 1978',
+    information: 'Korean, b. 1978',
     gallery: gallery1,
 };
 const InKyungKwon = {
     name: 'In Kyung Kwon',
-    information:'South Korean, b. 1979',
+    information: 'South Korean, b. 1979',
     gallery: gallery2,
     info: '권인경 작가는 오래된 책 콜라주, 먹 케이크, 아크릴 물감 등 다양한 소재를 사용하여 이질적인 차원이 뒤섞인 모호하지만 강력한 도시 풍경을 만들어낸다. 파편화된 공간 이미지와 다른 시간대의 단절된 기억에서 태어난 이 초현실적인 풍경은 모든 사람 안에 숨겨진 상상력의 회로를 활성화시켜 의식의 경계를 넘어 흐르는 환상적인 콜라주를 경험하게 한다.',
-    history: ['포스코미술관 신진작가 공모전(2016)','한국작가프로젝트(한국사립미술관협회, 2016)','서울시립미술관 신진작가 선정(2013)','송은미술상 선정작가(2007)','소장처: 국립현대미술관, 미술은행(2023, 2017, 2010, 2008), 양평군립미술관, 서울동부지검 신사옥 등']
+    history: [
+        '포스코미술관 신진작가 공모전(2016)',
+        '한국작가프로젝트(한국사립미술관협회, 2016)',
+        '서울시립미술관 신진작가 선정(2013)',
+        '송은미술상 선정작가(2007)',
+        '소장처: 국립현대미술관, 미술은행(2023, 2017, 2010, 2008), 양평군립미술관, 서울동부지검 신사옥 등',
+    ],
 };
 const LeeKiyoung = {
-    name:'Lee Kiyoung',
-    information:'Korean, b. 1964',
-    gallery:gallery2,
-    info:'한국 전통 회화를 현대적 시각 언어로 재해석한 것으로 유명한 작가 이기영은 한국 종이에 시간, 행동, 생각을 겹쳐 놓는 과정을 중심으로 작업을 합니다. 이 작가는 종이에 먹물을 채우고 지우고 다시 채우는 반복적인 과정을 통해 시간과 생각의 흔적을 축적합니다. 작업의 마지막 단계는 날카로운 칼로 극도로 집중한 상태에서 복잡한 선을 새기고 이 선들을 안료로 채우는 것입니다. 처음에는 먹 케이크로 어두워진 한국 종이에 숨겨져 있던 이 깊고 강렬한 색의 선들이 미묘하게 드러나며 작품을 면밀히 살펴보게 합니다. 직사각형과 같은 기하학적 모양이 먹 케이크 배경을 초월하여 초월적이면서도 비어 있는 공간을 만들어냅니다. 인간의 삶에 대한 깊은 성찰에서 비롯된 이기영의 작품은 현대 미술에서 흔히 볼 수 없는 독특한 미학을 보여준다. 먹물과 음의 공간의 조화, 표면이 발산하는 평면성의 정점, 기하학적 선의 조합이 모두 어우러져 독특한 아름다움을 전달한다. 명상의 수행과 유사한 그들의 예술은 끝없는 지우기 행위를 통해 공허함의 미학을 제공한다.',
-    history: ['이화여자대학교 한국화학과 교수','소장품 : 국립현대미술관, 서울시립미술관, 이스라엘 한국대사관, 핀란드 한국대사관 등']
-}
+    name: 'Lee Kiyoung',
+    information: 'Korean, b. 1964',
+    gallery: gallery2,
+    info: '한국 전통 회화를 현대적 시각 언어로 재해석한 것으로 유명한 작가 이기영은 한국 종이에 시간, 행동, 생각을 겹쳐 놓는 과정을 중심으로 작업을 합니다. 이 작가는 종이에 먹물을 채우고 지우고 다시 채우는 반복적인 과정을 통해 시간과 생각의 흔적을 축적합니다. 작업의 마지막 단계는 날카로운 칼로 극도로 집중한 상태에서 복잡한 선을 새기고 이 선들을 안료로 채우는 것입니다. 처음에는 먹 케이크로 어두워진 한국 종이에 숨겨져 있던 이 깊고 강렬한 색의 선들이 미묘하게 드러나며 작품을 면밀히 살펴보게 합니다. 직사각형과 같은 기하학적 모양이 먹 케이크 배경을 초월하여 초월적이면서도 비어 있는 공간을 만들어냅니다. 인간의 삶에 대한 깊은 성찰에서 비롯된 이기영의 작품은 현대 미술에서 흔히 볼 수 없는 독특한 미학을 보여준다. 먹물과 음의 공간의 조화, 표면이 발산하는 평면성의 정점, 기하학적 선의 조합이 모두 어우러져 독특한 아름다움을 전달한다. 명상의 수행과 유사한 그들의 예술은 끝없는 지우기 행위를 통해 공허함의 미학을 제공한다.',
+    history: [
+        '이화여자대학교 한국화학과 교수',
+        '소장품 : 국립현대미술관, 서울시립미술관, 이스라엘 한국대사관, 핀란드 한국대사관 등',
+    ],
+};
 const JungJungyeob = {
-    name:'Jung Jungyeob',
-    information:'Korean, b. 1962',
-    gallery:gallery2,
-    info:'정정엽은 한국 페미니스트 미술 운동의 최전선에 있는 영향력 있는 예술가입니다. 그녀의 다양한 작품에는 그림, 설치 미술, 퍼포먼스가 포함되며, 페미니스트와 생태적 관점에 깊이 영향을 받았습니다. 그녀의 대표 컬렉션인 "팥 시리즈"는 여성의 보이지 않는 노동에 초점을 맞추고 작은 씨앗 하나하나에 담긴 지구의 활력을 포착한 것으로 호평을 받고 있습니다.정의 예술성은 캔버스를 넘어 더 광범위한 서사를 구현하는데, 이는 평범한 것(팥, 콩, 봄나물)에서 노동과 삶에 대한 논평을 끌어내는 것입니다. 그녀의 작업은 공존에 대한 지속적인 탐구이며, 일상적 존재의 실마리를 모든 생명체의 집단적 서사와 함께 엮어냅니다.',
-    history: ['2022 이중섭미술상','2020 성평등문화대상','2019 고암 이응노미술상','개인전 20여회 및 단체전 다수']
-}
+    name: 'Jung Jungyeob',
+    information: 'Korean, b. 1962',
+    gallery: gallery2,
+    info: '정정엽은 한국 페미니스트 미술 운동의 최전선에 있는 영향력 있는 예술가입니다. 그녀의 다양한 작품에는 그림, 설치 미술, 퍼포먼스가 포함되며, 페미니스트와 생태적 관점에 깊이 영향을 받았습니다. 그녀의 대표 컬렉션인 "팥 시리즈"는 여성의 보이지 않는 노동에 초점을 맞추고 작은 씨앗 하나하나에 담긴 지구의 활력을 포착한 것으로 호평을 받고 있습니다.정의 예술성은 캔버스를 넘어 더 광범위한 서사를 구현하는데, 이는 평범한 것(팥, 콩, 봄나물)에서 노동과 삶에 대한 논평을 끌어내는 것입니다. 그녀의 작업은 공존에 대한 지속적인 탐구이며, 일상적 존재의 실마리를 모든 생명체의 집단적 서사와 함께 엮어냅니다.',
+    history: [
+        '2022 이중섭미술상',
+        '2020 성평등문화대상',
+        '2019 고암 이응노미술상',
+        '개인전 20여회 및 단체전 다수',
+    ],
+};
 const ItsukiKaito = {
-    name:'Itsuki Kaito',
+    name: 'Itsuki Kaito',
     information: 'Japanese, b. 1993',
-    gallery:gallery2,
-    info:'카이토 이츠키는 신화 속 초월적 영웅의 존재를 해체하고 그들의 자리를 수치심과 두려움으로 채웁니다. 여성에게 더 엄격한 예절이 요구되는 일본 사회에서 그녀는 부적절하고 부도덕하며 폭력적인 이미지를 통해 우리 몸 밖에서 우리에게 부과된 사회적 역할을 묘사합니다.',
-    history:['2024 Tang Contemporary Art, 베이징: 개인전','2022 HIVE Center for Comtemporary Art, 베이징: 개인전','2021 Tang Contemporary Art Hong Kong: 전시','2022 HIVE Center for Contemporary Art, 베이징','2021 Tang Contemporary Art, 홍콩']
-}
-
+    gallery: gallery2,
+    info: '카이토 이츠키는 신화 속 초월적 영웅의 존재를 해체하고 그들의 자리를 수치심과 두려움으로 채웁니다. 여성에게 더 엄격한 예절이 요구되는 일본 사회에서 그녀는 부적절하고 부도덕하며 폭력적인 이미지를 통해 우리 몸 밖에서 우리에게 부과된 사회적 역할을 묘사합니다.',
+    history: [
+        '2024 Tang Contemporary Art, 베이징: 개인전',
+        '2022 HIVE Center for Comtemporary Art, 베이징: 개인전',
+        '2021 Tang Contemporary Art Hong Kong: 전시',
+        '2022 HIVE Center for Contemporary Art, 베이징',
+        '2021 Tang Contemporary Art, 홍콩',
+    ],
+};
+const ChangukBak = {
+    name: 'ChangukBak',
+    information: 'Korean, b. 1982',
+    gallery: gallery3,
+    info: '박창욱은 한국의 떠오르는 추상화가입니다. 그는 자신의 추상적 표현과 스타일로 인간의 내면과 외면, 사람들의 존재의 문제, 관계 등을 찾아 독점적인 이미지와 패턴을 창조합니다.그의 독특한 작품은 고급 호텔과 다양한 박물관의 훌륭한 컬렉션에 포함되어 있습니다.',
+};
+const JungChoonpyo = {
+    name: 'Jung Choonpyo',
+    information: 'South Korean, b. 1966',
+    gallery: gallery3,
+    info: '정춘표는 한국에서 명성을 얻은 조각가입니다.그녀가 말했듯이 "제 작업은 제 인생에서 경험한 것을 포착하는 과정입니다." 그녀는 청동, 점토, 대리석을 사용하여 여성의 아름다움, 행운을 기원하는 북채, 사과, 작은 새, 사랑과 부의 상징과 같은 의미 있는 가치를 보여줍니다.',
+};
+const JEONGZIKSEONG = {
+    name: 'JEONG ZIK SEONG',
+    information: 'South Korean, b. 1976',
+    gallery: gallery2,
+    info: '정직성 작가는 끊임없이 회화의 영역을 확장하기 위해 실험을 거듭해 왔다. 그녀는 "반독립 주택", "공사장 추상", "블루 칼라/블루 컬러"와 같은 도시 풍경 시리즈에서 기하학적 추상 언어를 통해 현실적인 삶의 경험을 해석했다. 그녀는 또한 "현대적 나전 그림" 시리즈에서 나전의 물질성을 한국적 상징주의와 연결한다. 최근에는 바람과 비와 같은 대기의 변화에 ​​따라 숨쉬는 붓질과 함께 흐르는 다양한 심리적 형상의 층을 드러내는 작품을 선보이고 있다. 그녀의 이전 작업이 삶에서 추출한 기하학적 추상을 구현한 반면, 이제는 목적 없이 예기치 않게 그녀에게 다가오는 형상을 직관적으로 표현하는 보다 자유로운 과정으로 초점이 옮겨진다',
+    history:['2021년 공인당예술재단 올해의 작가상, 예술대상','2012년 오늘의 작가상, 김종영 미술관','소장처: 국립현대미술관, 서울시립미술관, 경기도미술관, 제주도립미술관, 서울대학교 미술관 등']
+};
 const artists = [
     AlanFears,
     CarstenBeck,
@@ -176,7 +233,34 @@ const artists = [
     InKyungKwon,
     LeeKiyoung,
     JungJungyeob,
-    ItsukiKaito
+    ItsukiKaito,
+    ChangukBak,
+    JungChoonpyo,
+    JEONGZIKSEONG,
+];
+const category = [
+    'painting',
+    'photography',
+    '20th-Century Art',
+    'Installation',
+    'Sculpture',
+];
+
+const exhibition = [
+    {
+        name: JEONGZIKSEONG,
+        gallery: gallery2,
+        info: 'GalleryMEME에서 처음으로 선보이는 "물달관세음보살" 시리즈는 작가 특유의 강력한 붓놀림과 붉은 물감이 흘러내리는 열정적인 흔적을 통해 관능적이고 강렬한 세속적 종교화를 선보이며, 고려시대 불교화에 묘사된 기이한 암석 지형의 정토를 배경으로 하고 있다. 작가는 이를 "매우 평범하면서도 세속적인 삶에서 끌어낸 영성"이라고 설명한다',
+        title:'Layered Life',
+        date:'August 21 – September 22, 2024'
+    },
+    {
+        name: ChangSungeun,
+        gallery: gallery1,
+        info: 'testtest',
+        title:'fkfkfkkfk',
+        date:'August 21 – September 22, 2024'
+    },
 ];
 
 const datas = [
@@ -847,6 +931,155 @@ const datas = [
         category: 'painting',
         artist: ItsukiKaito,
     },
+    {
+        id: 52,
+        title: 'The path of contact #5, 2014',
+        price: 17271000,
+        size: '63 9/10 × 51 3/10 in | 162.2 × 130.3 cm',
+        src: ChangukBak1,
+        frame: 'Not included',
+        materials: 'Charcoal, marble powder, acrylic on canvas',
+        rarity: 'Unique',
+        release: 2014,
+        category: 'painting',
+        artist: ChangukBak,
+        description:
+            '물리적 접근과 기억 시간에 대한 행동은 상관관계가 있는 것으로 간주됩니다. 접촉 지점에 접근할수록 더 명확해지고 접촉 지점에서 멀어질수록 더 흐릿해집니다.우리의 기억은 번쩍이고 접촉의 순간을 떠올립니다. 우리는 기억을 계속하기 위해 접촉 지점을 달성하려고 노력합니다.',
+    },
+    {
+        id: 53,
+        title: 'The path of contact #7, 2014',
+        price: 17271000,
+        size: '63 9/10 × 51 3/10 in | 162.2 × 130.3 cm',
+        src: ChangukBak2,
+        frame: 'Not included',
+        materials: 'Charcoal, marble powder, acrylic on canvas',
+        rarity: 'Unique',
+        release: 2014,
+        category: 'painting',
+        artist: ChangukBak,
+        description:
+            '그들은 연결되어 있다. 믿음의 움직임은 서로를 중심으로 돈다. 내가 움직여도 상대방이 움직이지 않으면 내 믿음은 사라진다. 둘의 관계는 존재와 같다. 셋의 관계는 넷의 존재다.',
+    },
+    {
+        id: 54,
+        title: 'The path of contact #8, 2014',
+        price: 29899000,
+        size: '102 × 76 2/5 in | 259 × 194 cm',
+        src: ChangukBak3,
+        frame: 'Not included',
+        materials: 'Charcoal, marble powder, acrylic on canvas',
+        rarity: 'Unique',
+        release: 2014,
+        category: 'painting',
+        artist: ChangukBak,
+        description:
+            '한 가지 움직임이 아이디어를 대변하는 것은 아니다. 모든 움직임의 합이 아이디어가 아니다. 움직일 가능성에 대한 선택의 합이 내적 궤적이다.',
+    },
+    {
+        id: 55,
+        title: 'like water, like wind, 2020',
+        price: 19880000,
+        size: '51 1/5 × 98 2/5 in | 130 × 250 cm',
+        src: JungChoonpyo1,
+        frame: 'included',
+        materials: 'Aluminium on canvas',
+        rarity: 'Unique',
+        release: 2020,
+        category: 'Sculpture',
+        artist: JungChoonpyo,
+    },
+    {
+        id: 56,
+        title: 'like water, like wind2, 2020',
+        price: 19880000,
+        size: '39 2/5 × 78 7/10 in | 100 × 200 cm',
+        src: JungChoonpyo2,
+        frame: 'included',
+        materials: 'Aluminium on canvas',
+        rarity: 'Unique',
+        release: 2020,
+        category: 'Sculpture',
+        artist: JungChoonpyo,
+    },
+    {
+        id: 57,
+        title: 'Beautiful dream, 2021',
+        price: 32000000,
+        size: '1299 1/5 × 2385 4/5 in | 3300 × 6060 cm',
+        src: JungChoonpyo3,
+        frame: 'Not included',
+        materials: 'Synthetic resins, painted urethane',
+        rarity: 'Unique',
+        release: 2021,
+        category: 'Installation',
+        artist: JungChoonpyo,
+    },
+    {
+        id: 58,
+        title: '수월관음보살도 Water-moon Avalakiteshvara 202426, 2024',
+        price: 43851000,
+        size: '76 3/10 × 51 3/10 in | 193.9 × 130.3 cm',
+        src: ZikSeongJeong1,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JEONGZIKSEONG,
+    },
+    {
+        id: 59,
+        title: '수월관음보살도 Water-moon Avalakiteshvara 202427, 2024',
+        price: 43851000,
+        size: '76 3/10 × 51 3/10 in | 193.9 × 130.3 cm',
+        src: ZikSeongJeong2,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JEONGZIKSEONG,
+    },
+    {
+        id: 60,
+        title: '수월관음보살도 Water-moon Avalakiteshvara 202428, 2024',
+        price: 43851000,
+        size: '76 3/10 × 51 3/10 in | 193.9 × 130.3 cm',
+        src: ZikSeongJeong3,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JEONGZIKSEONG,
+    },
+    {
+        id: 61,
+        title: 'Still Life 202347, 2023',
+        price: 21261000,
+        size: '46 × 35 4/5 in | 116.8 × 91 cm',
+        src: ZikSeongJeong4,
+        frame: 'Not included',
+        materials: 'Acrylic and oil on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'Painting',
+        artist: JEONGZIKSEONG,
+    },
+    {
+        id: 61,
+        title: '201710 Green Pool, 2017',
+        price: 13288000,
+        size: '24 1/5 × 27 1/5 in | 61.5 × 69 cm',
+        src: ZikSeongJeong5,
+        frame: 'included',
+        materials: 'Acrylic and oil on canvas, frame',
+        rarity: 'Unique',
+        release: 2017,
+        category: 'Painting',
+        artist: JEONGZIKSEONG,
+    },
 ];
 
-export { artists, datas };
+export { artists, datas, category, exhibition };

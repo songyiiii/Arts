@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 interface MainArtistsStyledProps {
     scrollY: number; //h1스크롤
-    useFlexBox: boolean;
 }
 
 export const MainArtistsStyled = styled.div<MainArtistsStyledProps>`
@@ -26,9 +25,9 @@ export const MainArtistsStyled = styled.div<MainArtistsStyledProps>`
         font-size: 8rem;
         transition: top 0.5s ease, left 0.5s ease;
         background-color: inherit;
-        color: black;
-        text-shadow: -1px 0px white, 0px 1px white, 1px 0px white,
-            0px -1px white;
-        opacity: 0.3;
+        color: rgba(255, 255, 255, 0.2);
+        /* text-shadow: -1px 0px white, 0px 1px white, 1px 0px white,
+            0px -1px white; */
+        opacity: 0.6;
     }
 `;

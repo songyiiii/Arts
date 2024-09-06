@@ -26,16 +26,16 @@ const MainArtists = () => {
         return `${duration}s ${delay}s`;
     };
 
-    console.log(visible,'비지블')
+    // console.log(visible,'비지블')
     //아티스트 이름이 화면에 30% 이상 나타날 때 감지
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
                 const entry = entries[0];
-                const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.5;
+                const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.1;
 
                 const updatedVisible: Record<number, boolean> = {};
-                console.log(updatedVisible,'업데이트비지블')
+                // console.log(updatedVisible,'업데이트비지블')
                 artists.forEach((_, index) => {
                     updatedVisible[index] = isVisible;
                 });

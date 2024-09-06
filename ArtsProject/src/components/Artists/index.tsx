@@ -3,6 +3,7 @@ import { artists, datas } from '@/utill/datas';
 import { ArtistsStyled } from './styled';
 import { useRouter } from 'next/router';
 
+
 const Artists = () => {
     const router = useRouter();
     const handleClick = (artistName: string) => {
@@ -37,9 +38,9 @@ const Artists = () => {
                         key={i}
                         onMouseEnter={() => NameHover(i)}
                         onMouseLeave={() => setHoverIndex(null)}
-                        
+                        onClick={() => handleClick(x.name)}
                     >
-                        <p onClick={() => handleClick(x.name)}>{x.name}</p>
+                        <p >{x.name}</p>
                         {hoverName && <img src={hoverName} alt={x.name} />}
                     </div>
                 );

@@ -5,36 +5,60 @@ import ArtworkItem from '../ArtwrokItem';
 import Category from '../Category';
 import ReactPaginate from 'react-paginate';
 import styles from './styles.module.css';
+import { SearchOutlined } from '@ant-design/icons';
+import { Button, Flex, Tooltip, Input } from 'antd';
+import { useFormik } from 'formik';
 
 const ArtworkList = () => {
+    //카테고리 저장
     const [selectCategory, setSelectCategory] = useState<string | null>(null);
-    const [search, setSearch] = useState<string>('');
-    const [sortOption, setSortOption] = useState<string>('latest'); // 정렬 상태
-    const [currentPage, setCurrentPage] = useState<number>(1); // 현재 페이지 상태
-    const itemsPerPage = 9; // 페이지당 항목 수
+    //검색어 상태
+    const [submittedSearch, setSubmittedSearch] = useState<string>('');
+    //현재 페이지 상태 저장
+    const [currentPage, setCurrentPage] = useState<number>(0);
+    //한페이지에 몇개보여줄건지
+    const itemsPerPage = 9;
 
+    const formik = useFormik({
+        initialValues: {
+            search: '', // 검색어 초기값
+            sortOption: 'latest', // 정렬 옵션 초기값
+        },
+        onSubmit: (values, { resetForm }) => {
+            setSubmittedSearch(values.search); // 검색어 제출
+            setCurrentPage(0); // 검색 시 첫 페이지로 이동
+        },
+    });
+    // console.log(selectCategory,'셀렉카테고리')
     const filterData = datas
         .filter((data) => {
-            // 카테고리 필터 적용
-            if (selectCategory && data.category !== selectCategory)
+            // console.log(data.category,'데이터카테고리확인')
+            if (
+                selectCategory &&
+                selectCategory !== 'all' &&
+                data.category !== selectCategory
+            ) {
                 return false;
-            // 검색어 필터 적용 (작가 이름 또는 제목에 검색어 포함)
+            } // 검색어 필터 적용 (작가 이름 또는 제목에 검색어 포함)
             return (
-                data.title.toLowerCase().includes(search.toLowerCase()) ||
-                data.artist.name.toLowerCase().includes(search.toLowerCase())
+                data.title
+                    .toLowerCase() //소문자로 변경(검색비교를위해)
+                    .includes(submittedSearch.toLowerCase()) ||
+                data.artist.name
+                    .toLowerCase()
+                    .includes(submittedSearch.toLowerCase())
             );
         })
-        .sort((a, b) => {
+        .sort((a, b) =>
             // 정렬 옵션에 따라 데이터 정렬
-            if (sortOption === 'latest') {
-                return b.release - a.release; // 최신순
-            } else if (sortOption === 'priceAsc') {
-                return a.price - b.price; // 가격 오름차순
-            } else if (sortOption === 'priceDesc') {
-                return b.price - a.price; // 가격 내림차순
-            }
-            return 0;
-        });
+            formik.values.sortOption === 'latest'
+                ? b.release - a.release
+                : formik.values.sortOption === 'priceAsc'
+                ? a.price - b.price
+                : formik.values.sortOption === 'priceDesc'
+                ? b.price - a.price
+                : 0
+        );
 
     // 현재 페이지에 해당하는 항목만 추출
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
@@ -52,24 +76,34 @@ const ArtworkList = () => {
     return (
         <div className={styles.wrap}>
             <Category onSelectCategory={setSelectCategory}></Category>
-            <div className={styles.formBox}>
-                <input
+            <form onSubmit={formik.handleSubmit} className={styles.formBox}>
+                <Input
+                    name="search"
                     className={styles.input}
-                    type="text"
                     placeholder="Search by artist or title"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    value={formik.values.search}
+                    onChange={formik.handleChange} // Formik의 handleChange로 입력 관리
+                    onPressEnter={formik.handleSubmit} // 엔터키로 제출
+                    // style={{ width: 200, marginRight: 8 }}
                 />
+                <Tooltip title="search" className={styles.button}>
+                    <Button
+                        htmlType="submit"
+                        shape="circle"
+                        icon={<SearchOutlined />}
+                    />
+                </Tooltip>
                 <select
+                    name="sortOption"
+                    value={formik.values.sortOption}
+                    onChange={formik.handleChange} // 정렬 옵션도 Formik에서 관리
                     className={styles.select}
-                    value={sortOption}
-                    onChange={(e) => setSortOption(e.target.value)}
                 >
                     <option value="latest">최신순</option>
-                    <option value="priceAsc">높은가격순</option>
-                    <option value="priceDesc">낮은가격순</option>
+                    <option value="priceAsc">낮은가격순</option>
+                    <option value="priceDesc">높은가격순</option>
                 </select>
-            </div>
+            </form>
 
             <ArtworkListStyled>
                 {currentItems.map((x, i) => {
