@@ -54,12 +54,7 @@ const MainPage = () => {
                 className="section cards"
                 ref={(el) => (sectionRefs.current[2] = el)} // 배열의 두 번째 요소로 할당
             >
-                {/* <Cards /> */}
-            </div>
-            <div
-                className="section cards"
-                ref={(el) => (sectionRefs.current[3] = el)}
-            >
+                <Cards />
                 <CircleCard />
             </div>
         </MainPageStyled>

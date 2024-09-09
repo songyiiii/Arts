@@ -1,11 +1,11 @@
 import React from 'react';
 import { CardsStyled } from './styled';
-import { exhibition, datas } from '../../utill/datas';
+import { exhibition2, datas } from '../../utill/datas';
 import CardList from '../CardList';
 
 export const Cards = () => {
     // 전시 작가의 대표 이미지와 갤러리 정보를 추출
-    const exhibitionNames = exhibition.map((data) => data.name.name);
+    const exhibitionNames = exhibition2.map((data) => data.name.name);
     const filterDatas = datas.filter((data) =>
         exhibitionNames.includes(data.artist.name)
     );
@@ -14,7 +14,7 @@ export const Cards = () => {
         <CardsStyled>
             <h1>EXHIBITION</h1>
             <div className='bgBox'></div>
-            {exhibition.map((exhibit, index) => {
+            {exhibition2.map((exhibit, index) => {
                 const filteredData = filterDatas.find((data) => data.artist.name === exhibit.name.name);
                 return (
                     filteredData && (

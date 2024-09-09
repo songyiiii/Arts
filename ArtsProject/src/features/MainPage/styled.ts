@@ -34,5 +34,7 @@ export const MainPageStyled = styled.div`
 
     .cards {
         background-color: black;
+        display: block;
+        margin-bottom: 200px;
     }
 `;
