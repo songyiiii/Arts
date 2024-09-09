@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { artists, datas } from '@/utill/datas';
 import { ArtistsStyled } from './styled';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image';
 
 const Artists = () => {
     const router = useRouter();
@@ -35,13 +35,13 @@ const Artists = () => {
                 return (
                     <div
                         className="artist"
-                        key={i}
+                        key={x.name}
                         onMouseEnter={() => NameHover(i)}
                         onMouseLeave={() => setHoverIndex(null)}
                         onClick={() => handleClick(x.name)}
                     >
-                        <p >{x.name}</p>
-                        {hoverName && <img src={hoverName} alt={x.name} />}
+                        <p>{x.name}</p>
+                        {hoverName && <Image src={hoverName} alt={x.name} width={400} height={400}/>}
                     </div>
                 );
             })}

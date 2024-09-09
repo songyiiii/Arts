@@ -24,7 +24,7 @@ const ArtworkList = () => {
             search: '', // 검색어 초기값
             sortOption: 'latest', // 정렬 옵션 초기값
         },
-        onSubmit: (values, { resetForm }) => {
+        onSubmit: (values) => {
             setSubmittedSearch(values.search); // 검색어 제출
             setCurrentPage(0); // 검색 시 첫 페이지로 이동
         },
@@ -73,6 +73,12 @@ const ArtworkList = () => {
         setCurrentPage(selectedItem.selected); // 선택한 페이지로 이동
     };
 
+    function handleKeyPress(event: React.KeyboardEvent<HTMLInputElement>): void {
+        if (event.key === 'Enter') {
+            formik.handleSubmit(); // 엔터키를 누르면 폼 제출
+        }
+    }
+
     return (
         <div className={styles.wrap}>
             <Category onSelectCategory={setSelectCategory}></Category>
@@ -83,7 +89,7 @@ const ArtworkList = () => {
                     placeholder="Search by artist or title"
                     value={formik.values.search}
                     onChange={formik.handleChange} // Formik의 handleChange로 입력 관리
-                    onPressEnter={formik.handleSubmit} // 엔터키로 제출
+                    onKeyDown={handleKeyPress}  // 엔터키로 제출
                     // style={{ width: 200, marginRight: 8 }}
                 />
                 <Tooltip title="search" className={styles.button}>
@@ -109,7 +115,7 @@ const ArtworkList = () => {
                 {currentItems.map((x, i) => {
                     return (
                         <ArtworkItem
-                            key={i}
+                            key={x.id}
                             title={x.title}
                             artist={x.artist.name}
                             price={x.price}

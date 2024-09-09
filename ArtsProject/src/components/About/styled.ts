@@ -6,7 +6,6 @@ export const AboutStyled = styled.div`
     .AboutTop {
         padding-top: 50px;
         margin-bottom: 100px;
-        /* display: flex; */
         align-items: center;
         animation: fadeInUp 1.2s ease-out;
         @keyframes fadeInUp {
@@ -19,16 +18,14 @@ export const AboutStyled = styled.div`
                 transform: translateY(0);
             }
         }
-        .img {
+        .imgBox {
             width: 100%;
             display: flex;
             justify-content: end;
             position: relative;
-            img {
-                width: 80%;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-                border-radius: 20px 0 0 0;
+            .img {
+                border-radius: 30px 0 0 0;
+                width: 80% !important;
             }
             h1,
             h2 {

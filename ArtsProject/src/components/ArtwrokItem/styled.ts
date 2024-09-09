@@ -10,7 +10,7 @@ export const ArtworkItemStyled = styled.div`
         justify-content: center;
 
         img {
-            width: 130%;
+            width: 100%;
             cursor: pointer;
             transition: transform 0.2s ease-in-out;
         }

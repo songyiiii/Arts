@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@reduxjs/toolkit": "^2.2.7",
     "antd": "^5.20.3",
+    "express": "^4.19.2",
     "formik": "^2.4.6",
     "framer-motion": "^11.3.31",
     "gasp": "^0.0.2",
@@ -25,6 +26,7 @@
     "react-paginate": "^8.2.0",
     "react-scroll-motion": "^0.3.3",
     "redux": "^5.0.1",
+    "sharp": "^0.33.5",
     "styled-components": "^6.1.12",
     "swiper": "^11.1.12"
   },

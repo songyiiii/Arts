@@ -5,10 +5,9 @@ interface CardsProps {
     imageSrc: string;
     galleryName: string;
     exhibitionName: string;
-    exhibitionPeriod: string; // 전시 기간
 }
 
-const CardList = ({ imageSrc, galleryName, exhibitionName, exhibitionPeriod }: CardsProps) => {
+const CardList = ({ imageSrc, galleryName, exhibitionName,  }: CardsProps) => {
     const [hover, setHover] = useState(false);
 
     return (
@@ -38,7 +37,6 @@ const CardList = ({ imageSrc, galleryName, exhibitionName, exhibitionPeriod }: C
                     <div className="text">
                         <p>{galleryName}</p>
                         <p>{exhibitionName}</p>
-                        <p>{exhibitionPeriod}</p>
                     </div>
                 </div>
             </div>

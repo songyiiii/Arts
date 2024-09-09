@@ -1,6 +1,8 @@
 import { ArtworkItemStyled } from './styled';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 interface ArtworkItemProps {
     id: number;
@@ -38,8 +40,7 @@ const ArtworkItem = ({
                         style={{
                             transformOrigin: `${position.x}% ${position.y}%`,
                         }}
-                        src={imgUrl}
-                    ></img>
+                        src={imgUrl} alt={title}                />
                 </div>
                 <div className="text">
                     <p>{artist}</p>

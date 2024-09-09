@@ -6,39 +6,38 @@ import { datas } from '@/utill/datas';
 // Artist 데이터 타입 정의
 interface Artist {
     name: string;
-    information: string;
+    information?: string;
     gallery?: {
         name: string;
         location?: string;
     };
-    info: string;
-    history: string[];
+    info?: string;
+    history?: string[];
 }
 interface Artwork {
     id: number;
     title: string;
     price: number;
-    category: string;
     size: string;
-    materials: string;
+    src: { src: string };
     frame: string;
+    materials: string;
     rarity: string;
     release: number;
-    src: {
-        src: string;
-        height: number;
-        width: number;
+    category: string;
+    artist: {
+        name: string;
+        info: string;
+        company: string;
     };
-    artist: Artist;
+    description?: string;
 }
 interface ArtisrPageProps {
     artistName: string;
 }
 
 const ArtistDetail = ({ artistName }: ArtisrPageProps) => {
-    const artistData: Artwork[] = datas.filter(
-        (data) => data.artist.name === artistName
-    );
+    const artistData = datas.filter((data) => data.artist.name === artistName);
     // console.log(artistData, '아티스트데이터');
     if (artistData.length === 0) {
         return <ArtistDetailStyled>Artist not found</ArtistDetailStyled>;
@@ -55,9 +54,13 @@ const ArtistDetail = ({ artistName }: ArtisrPageProps) => {
                 <h3>{artistInfo.gallery?.name}</h3>
                 <p>{artistInfo.info}</p>
 
-                {artistInfo.history?.map((x: string) => {
-                    <h4>이력</h4>;
-                    return <p>{x}</p>;
+                {artistInfo.history?.map((x: string, i) => {
+                    return (
+                        <div key={i}>
+                            <h4>이력</h4>
+                            <p>{x}</p>
+                        </div>
+                    );
                 })}
             </div>
             <h1 className="title">Artworks</h1>

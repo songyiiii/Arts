@@ -4,7 +4,7 @@ import { ArtworkDetailTopStyled } from './styled';
 
 interface artworkProps {
     artwork: {
-        artist: { name: string; info: string; company: string };
+        artist: { name: string; info?: string; company?:string};
         category: string;
         frame: string;
         id: number;
@@ -34,7 +34,7 @@ const ArtworkDetailTop = ({ artwork }: artworkProps) => {
     return (
         <ArtworkDetailTopStyled>
             <div className="imgBox">
-                <Image src={artwork.src.src} />
+                <Image src={artwork.src.src} alt={artwork.title}/>
             </div>
             <div className="buyBox">
                 <div className="textBox">

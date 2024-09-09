@@ -6,7 +6,8 @@ import { Cards } from '@/components/Cards';
 import CircleCard from '@/components/CircleCard';
 
 const MainPage = () => {
-    const sectionRefs = useRef([]); // 여러 섹션을 참조하는 배열
+    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(

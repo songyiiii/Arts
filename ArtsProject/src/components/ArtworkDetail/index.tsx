@@ -20,7 +20,7 @@ const ArtworkDetail = () => {
         (item) =>
             item.artist.name === artwork.artist.name && item.title !== title
     );
-    console.log(otherArtworks, '아더확인');
+    // console.log(otherArtworks, '아더확인');
     return (
         <ArtworkDetailStyled>
             <ArtworkDetailTop artwork={artwork}></ArtworkDetailTop>

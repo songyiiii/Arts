@@ -22,7 +22,7 @@ const CarouselWrap2 = () => {
             >
                 {slide?.map((x, i) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide key={i}>
                             <a href={x.link}>
                                 <div className="mainSlide">
                                     <div className="textBox1"  >
@@ -31,7 +31,7 @@ const CarouselWrap2 = () => {
                                         <h2>{x.name}</h2>
                                         <h2>{x.name}</h2>
                                     </div>
-                                    <img src={x.img}></img>
+                                    <img src={x.img} alt={x.name}></img>
                                     <div className="textBox2" >
                                         <h2>{x.date}</h2>
                                         <h2>{x.location}</h2>

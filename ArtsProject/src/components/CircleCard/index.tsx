@@ -13,7 +13,7 @@ const CircleCard = () => {
         <CircleCardStyled>
             {filterDatas?.map((x, i) => {
                 // console.log(x,'dprtm')
-                return <CircleCardList   imgSrc={x.src.src} title={x.title}/>;
+                return <CircleCardList   imgSrc={x.src.src} title={x.title} key={x.title}/>;
             })}
         </CircleCardStyled>
     );

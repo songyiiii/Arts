@@ -9,21 +9,27 @@ export const Cards = () => {
     const filterDatas = datas.filter((data) =>
         exhibitionNames.includes(data.artist.name)
     );
-    
+
     return (
         <CardsStyled>
             <h1>EXHIBITION</h1>
-            <div className='bgBox'></div>
-            {exhibition2.map((exhibit, index) => {
-                const filteredData = filterDatas.find((data) => data.artist.name === exhibit.name.name);
+            <div className="bgBox"></div>
+            {exhibition2.map((x, index) => {
+                console.log(x,'엑스ㅡ스슷')
+                const filteredData = filterDatas.find(
+                    (data) => data.artist.name === x.name.name
+                );
                 return (
                     filteredData && (
                         <CardList
-                            key={index}
+                            key={x.title}
                             imageSrc={filteredData.src.src}
-                            galleryName={filteredData.artist.gallery.name}
-                            exhibitionName={exhibit.title} // 전시명
-                            exhibitionPeriod={exhibit.date} // 전시 기간
+                            galleryName={
+                                'gallery' in filteredData.artist
+                                    ? filteredData.artist.gallery.name
+                                    : 'N/A' // 갤러리 정보가 없을 경우 처리
+                            }
+                            exhibitionName={x.title} // 전시명
                         />
                     )
                 );
