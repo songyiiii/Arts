@@ -1,8 +1,6 @@
+import { Image, Modal } from 'antd';
+import React, { useState } from 'react';
 import { ArtworkDetailTopStyled } from './styled';
-import Zoom from 'react-medium-image-zoom';
-import 'react-medium-image-zoom/dist/styles.css'; // 확대 기능 스타일
-
-
 
 interface artworkProps {
     artwork: {
@@ -20,13 +18,23 @@ interface artworkProps {
 }
 
 const ArtworkDetailTop = ({ artwork }: artworkProps) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
 
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
 
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
     return (
         <ArtworkDetailTopStyled>
             <div className="imgBox">
-                <img src={artwork.src.src}></img>
+                <Image src={artwork.src.src} />
             </div>
             <div className="buyBox">
                 <div className="textBox">
@@ -38,9 +46,21 @@ const ArtworkDetailTop = ({ artwork }: artworkProps) => {
                     <p>{artwork.price.toLocaleString()}</p>
                 </div>
                 <div className="btnBox">
-                    <button type="button">구매하기</button>
-                    <button type="button">장바구니</button>
+                    <button type="button" onClick={showModal}>
+                        구매하기
+                    </button>
+                    <button type="button" onClick={showModal}>
+                        장바구니
+                    </button>
                 </div>
+                <Modal
+                    title="Basic Modal"
+                    open={isModalOpen}
+                    onOk={handleOk}
+                    onCancel={handleCancel}
+                >
+                    <p>준비중입니다</p>
+                </Modal>
             </div>
         </ArtworkDetailTopStyled>
     );

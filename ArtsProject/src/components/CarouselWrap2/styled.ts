@@ -1,89 +1,96 @@
 import styled from 'styled-components';
 
 export const CarouselWrap2Styled = styled.div`
-    padding-top: 50px;
-    padding-bottom: 100px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 62px;
     .swiper {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
+        overflow: hidden;
     }
-
     .swiper-slide {
         text-align: center;
         font-size: 18px;
         background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.3s ease;
-    }
-
-    .swiper-slide {
+        transition: all 0.5s ease;
+        cursor: pointer;
         .mainSlide {
-            /* display: block; */
-            width: 50%;
-            height: 50%;
-            transition: all 1s ease;
-            background-color: white;
+            width: 100%;
+            height: 90%;
             position: relative;
-            overflow: hidden;
-            opacity: 0;
-            .title {
-                /* width: 100%; */
-                font-size: 2.2rem;
-                transition: all 30s ease;
+            color: white;
+            text-align: left;
+            img {
+                width: 50%;
+                height: 35%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                transition: all 2s ease;
             }
-            .title.hovered {
-                left: 0;
-                top: 50%;
-                transform: translate(0,-50%) rotate(90deg);
-            }
-            .info {
+            .textBox1,
+            .textBox2 {
+                font-size: 1.7rem;
+                color: white;
                 position: absolute;
-                bottom: 5%;
-                display: flex;
+                left: 0;
+                z-index: 10000;
                 opacity: 0;
-                transition: all 1.5s ease;
+                background-color: black;
+                width: 100%;
+                animation: scroll-text 30s linear infinite;
                 white-space: nowrap;
-                animation: slideLeft 20s linear infinite;
-                li {
-                    list-style: none;
-                    background-color: black;
-                    color: white;
-                    width: 150px;
-                    border-radius: 15px;
-                    margin: 10px 20px;
-                    cursor: pointer;
-                    padding: 10px;
-                }
+            }
+            .textBox1 {
+                top: 0;
+            }
+
+            .textBox2 {
+                bottom: 0;
+            }
+            .textBox1 h2,
+            .textBox2 h2 {
+                margin-right: 20px;
+                -webkit-text-stroke: 1px white;
+                color: black;
             }
         }
     }
-
+    @keyframes scroll-text {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
     .swiper-slide-active {
         .mainSlide {
-            width: 100%;
-            height: 100%;
-            opacity: 1;
-            .title {
-                font-size: 1.6rem;
-                transition: all 1.5s ease;
+            img {
+                width: 100%;
+                height: 85%;
             }
-            .info {
+            .textBox1,
+            .textBox2 {
                 opacity: 1;
+                display: flex;
             }
         }
     }
-    @keyframes slideLeft {
-        0% {
-            transform: translateX(100%); /* 오른쪽에서 시작 */
-        }
-        100% {
-            transform: translateX(-100%); /* 왼쪽으로 끝까지 이동 */
-        }
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 50px;
+        height: 50px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 `;

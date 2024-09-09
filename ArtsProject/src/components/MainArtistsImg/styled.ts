@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const MainAristImgStyled = styled.div`
-    width: 50%;
-    height: 100%;
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,5 +10,13 @@ export const MainAristImgStyled = styled.div`
         cursor: pointer;
         opacity: 0; /* 기본 상태에서 이미지를 숨김 */
         transition: opacity 0.5s ease-in-out; /* 부드러운 전환 효과 */
+    }
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        height: 50%;
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        width: 100%;
+        height: 50%;
     }
 `;

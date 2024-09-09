@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ArtworkDetailTopStyled = styled.div`
     width: 95%;
     margin: 30px auto;
-    
     .buyBox {
         display: flex;
         flex-direction: column;
@@ -72,13 +71,11 @@ export const ArtworkDetailTopStyled = styled.div`
     }
     @media screen and (min-width: 769px) {
         display: flex;
+        justify-content: space-between;
         .imgBox {
-            width: 60%;
+            width: 55%;
             img {
                 width: 100%;
-            }
-            img:hover {
-                cursor: zoom-in;
             }
         }
         .buyBox {

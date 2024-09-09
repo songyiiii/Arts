@@ -1,44 +1,50 @@
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper/modules';
-import slide2 from '../../assets/image/slide2.jpg';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { CarouselWrap2Styled } from './styled';
+import { slide } from '../../utill/datas';
 
 const CarouselWrap2 = () => {
-    // console.log(slide, 'tmffkdlem');
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => setIsHovered(true);
-    const handleMouseLeave = () => setIsHovered(false);
     return (
         <CarouselWrap2Styled>
-            <Swiper>
-                <SwiperSlide>
-                    <div className="mainSlide">
-                        <div className={`title ${isHovered ? 'hovered' : ''}`}>
-                            <h1>2024 SEOUL ARTFAIR</h1>
-                            <h3>August 13 - August 30</h3>
-                            <h3>Coex, Seoul</h3>
-                        </div>
-                        <ul
-                            className="info"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            {/* 많은 li 요소들 */}
-                            {Array.from({ length: 10 }, (_, i) => (
-                                <li key={i}>Item {i + 1}</li>
-                            ))}
-                        </ul>
-                        <div className="company"></div>
-                    </div>
-                </SwiperSlide>
+            <Swiper
+                modules={[ Navigation, Autoplay]}
+                spaceBetween={30}
+                pagination={{ clickable: true }}
+                navigation // 기본 내비게이션 버튼 활성화
+                className="swiper"
+                autoplay={{
+                    delay: 4000, // 2초마다 슬라이드 넘기기
+                    disableOnInteraction: false, // 사용자가 슬라이드를 터치하거나 클릭해도 자동 넘김 유지
+                }}
+            >
+                {slide?.map((x, i) => {
+                    return (
+                        <SwiperSlide>
+                            <a href={x.link}>
+                                <div className="mainSlide">
+                                    <div className="textBox1"  >
+                                        <h2>{x.name}</h2>
+                                        <h2>{x.name}</h2>
+                                        <h2>{x.name}</h2>
+                                        <h2>{x.name}</h2>
+                                    </div>
+                                    <img src={x.img}></img>
+                                    <div className="textBox2" >
+                                        <h2>{x.date}</h2>
+                                        <h2>{x.location}</h2>
+                                        <h2>{x.date}</h2>
+                                        <h2>{x.location}</h2>
+                                        <h2>{x.date}</h2>
+                                        <h2>{x.location}</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </CarouselWrap2Styled>
     );

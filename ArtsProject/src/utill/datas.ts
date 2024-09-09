@@ -1,5 +1,3 @@
-import slide1 from '../assets/image/slide1.jpg';
-import slide2 from '../assets/image/slide2.jpg';
 import AlanFears1 from '../assets/image/AlanFears1.png';
 import AlanFears2 from '../assets/image/AlanFears2.png';
 import AlanFears3 from '../assets/image/AlanFears3.png';
@@ -59,12 +57,35 @@ import ChangukBak3 from '../assets/image/ChangukBak3.png';
 import JungChoonpyo1 from '../assets/image/JungChoonpyo1.png';
 import JungChoonpyo2 from '../assets/image/JungChoonpyo2.png';
 import JungChoonpyo3 from '../assets/image/JungChoonpyo3.png';
-import ZikSeongJeong1 from '../assets/image/ZikSeongJeong1.png'
-import ZikSeongJeong2 from '../assets/image/JEONGZIKSEONG2.png'
-import ZikSeongJeong3 from '../assets/image/JEONGZIKSEONG3.png'
-import ZikSeongJeong4 from '../assets/image/JEONGZIKSEONG4.png'
-import ZikSeongJeong5 from '../assets/image/JEONGZIKSEONG5.png'
+import ZikSeongJeong1 from '../assets/image/ZikSeongJeong1.png';
+import ZikSeongJeong2 from '../assets/image/JEONGZIKSEONG2.png';
+import ZikSeongJeong3 from '../assets/image/JEONGZIKSEONG3.png';
+import ZikSeongJeong4 from '../assets/image/JEONGZIKSEONG4.png';
+import ZikSeongJeong5 from '../assets/image/JEONGZIKSEONG5.png';
+import slide1 from '../assets/image/slide1.jpg';
+import slide2 from '../assets/image/slide2.jpg';
+import JohannesDaniel1 from '../assets/image/JohannesDaniel1.png';
+import JohannesDaniel2 from '../assets/image/JohannesDaniel2.png';
+import JohannesDaniel3 from '../assets/image/JohannesDaniel3.png';
+import JohannesDaniel4 from '../assets/image/JohannesDaniel4.png';
+import JohannesDaniel5 from '../assets/image/JohannesDaniel5.png';
+import { title } from 'process';
 
+const slide = [
+    {
+        name: 'Kiaf SEOUL 2024',
+        img: slide1.src,
+        date: '2024.09.12-09.30',
+        location: 'Coex 1F, Hall A & B; 2F The Platz, Seoul',
+        link: 'https://kiaf.org/visit-ticket',
+    },
+    {
+        name: 'Frieze Seoul 2024',
+        img: slide2.src,
+        date: '2024.09.17-10.05',
+        location: ' COEX, 513 Seoul',
+    },
+];
 
 const gallery1 = { name: 'SPACE Willing N Dealing' };
 const gallery2 = { name: 'GalleryMEME' };
@@ -73,10 +94,13 @@ const gallery3 = {
     info: '다양한 아트 매개 시스템을 운영하는 아트 회사입니다. ARTS와 함께 해외에서 거의 선보이지 않았던 한국의 신진, 중견, 중견 아티스트를 소개합니다. 새로운 한국 아트를 찾고 있다면 art B project가 최고의 파트너가 될 것입니다! 한국에 거주하는 아티스트를 지원하기 위해 아티스트 에이전시를 운영합니다. 또한 한국 아티스트와 함께 개인 아트 컬렉터를 위한 아트 컨설팅, 기업과의 협업, 아트 협업 등 귀중한 프로젝트를 진행합니다.',
 };
 const gallery4 = {
-    name:'unbound',
-    info:'unbound는 다양한 예술 형식을 탐구하는 데 전념하는 창의적인 아트 랩입니다. 저희 공간은 창의성이 경계를 모르는 역동적인 허브로, 시각 예술, 디지털 예술, 음악 공연, 연극 및 멀티미디어 프로젝트에서 광범위한 예술적 표현을 선보입니다. unbound는 기존의 경계에 도전하고 아티스트와 관객 간의 견고한 관계를 구축하기 위해 프로젝트를 선택하고 큐레이팅합니다'
-}
-
+    name: 'unbound',
+    info: 'unbound는 다양한 예술 형식을 탐구하는 데 전념하는 창의적인 아트 랩입니다. 저희 공간은 창의성이 경계를 모르는 역동적인 허브로, 시각 예술, 디지털 예술, 음악 공연, 연극 및 멀티미디어 프로젝트에서 광범위한 예술적 표현을 선보입니다. unbound는 기존의 경계에 도전하고 아티스트와 관객 간의 견고한 관계를 구축하기 위해 프로젝트를 선택하고 큐레이팅합니다',
+};
+const gallery5 = {
+    name: 'Rutger Brandt Gallery',
+    info: 'Rutger Brandt Gallery는 사회적으로 참여하고 내러티브한 현대 미술을 선보이는 데 전념하며, 다세대 프로그램에서 떠오르는 젊은 아티스트와 이미 자리를 잡은 국제 아티스트를 모두 선보입니다. 저희의 사명은 현 시대 정신을 반영하는 현대 정치와 현대적 주제를 다루는 생각을 자극하는 작품을 만드는 아티스트를 홍보하는 것입니다. 저희의 다양한 아티스트는 현대 사회의 소외, 고립, 부조리와 같은 인간 경험과 관계의 다양한 측면을 탐구합니다. 다양한 매체를 사용하여 저희 아티스트는 전통적인 표현 형식에 도전하고 일상 생활의 예상치 못한 측면을 밝혀 자기 반성과 세계적 인식을 장려합니다',
+};
 const AlanFears = {
     name: 'Alan Fears',
     info: '앨런 피어스는 영국의 신진 예술가입니다. "순진한 예술가, 그래픽 아티스트, 팝 아티스트... 저는 이 둘의 일부입니다." 피어스가 말했습니다. "제 스타일은 단순하고 직접적입니다. 제 예술의 대부분 주제는 저 자신과 다른 모든 사람에게 인간이 얼마나 위대하고 어리석을 수 있는지, 그리고 따라서 삶이 얼마나 위대하고 어리석을 수 있는지 상기시키는 것입니다." 피어스는 2018년과 2020년에 모두 최고의 현대 회화에 수여되는 존 무어스 회화상 후보에 올랐습니다. 그의 작품은 문학 및 예술 잡지인 The Paris Review 의 2019년 여름호 표지에 실렸습니다 .',
@@ -210,7 +234,17 @@ const JEONGZIKSEONG = {
     information: 'South Korean, b. 1976',
     gallery: gallery2,
     info: '정직성 작가는 끊임없이 회화의 영역을 확장하기 위해 실험을 거듭해 왔다. 그녀는 "반독립 주택", "공사장 추상", "블루 칼라/블루 컬러"와 같은 도시 풍경 시리즈에서 기하학적 추상 언어를 통해 현실적인 삶의 경험을 해석했다. 그녀는 또한 "현대적 나전 그림" 시리즈에서 나전의 물질성을 한국적 상징주의와 연결한다. 최근에는 바람과 비와 같은 대기의 변화에 ​​따라 숨쉬는 붓질과 함께 흐르는 다양한 심리적 형상의 층을 드러내는 작품을 선보이고 있다. 그녀의 이전 작업이 삶에서 추출한 기하학적 추상을 구현한 반면, 이제는 목적 없이 예기치 않게 그녀에게 다가오는 형상을 직관적으로 표현하는 보다 자유로운 과정으로 초점이 옮겨진다',
-    history:['2021년 공인당예술재단 올해의 작가상, 예술대상','2012년 오늘의 작가상, 김종영 미술관','소장처: 국립현대미술관, 서울시립미술관, 경기도미술관, 제주도립미술관, 서울대학교 미술관 등']
+    history: [
+        '2021년 공인당예술재단 올해의 작가상, 예술대상',
+        '2012년 오늘의 작가상, 김종영 미술관',
+        '소장처: 국립현대미술관, 서울시립미술관, 경기도미술관, 제주도립미술관, 서울대학교 미술관 등',
+    ],
+};
+const JohannesDaniel = {
+    name: 'Johannes Daniel',
+    information: 'German, b. 1987',
+    gallery: gallery5,
+    info: '요하네스 다니엘은 라이프치히에 거주하는 독일 예술가로, 조각난 인간 형상을 묘사한 대규모 그래픽 페인팅을 제작합니다. 그는 유동적인 선과 파스텔 컬러를 통해 몽환적인 액체 세계를 그리며, 거친 그래피티와 도시적 미학과 대조를 이룹니다.',
 };
 const artists = [
     AlanFears,
@@ -237,6 +271,7 @@ const artists = [
     ChangukBak,
     JungChoonpyo,
     JEONGZIKSEONG,
+    JohannesDaniel,
 ];
 const category = [
     'painting',
@@ -251,15 +286,15 @@ const exhibition = [
         name: JEONGZIKSEONG,
         gallery: gallery2,
         info: 'GalleryMEME에서 처음으로 선보이는 "물달관세음보살" 시리즈는 작가 특유의 강력한 붓놀림과 붉은 물감이 흘러내리는 열정적인 흔적을 통해 관능적이고 강렬한 세속적 종교화를 선보이며, 고려시대 불교화에 묘사된 기이한 암석 지형의 정토를 배경으로 하고 있다. 작가는 이를 "매우 평범하면서도 세속적인 삶에서 끌어낸 영성"이라고 설명한다',
-        title:'Layered Life',
-        date:'August 21 – September 22, 2024'
+        title: 'Layered Life',
+        date: 'August 21 – September 22, 2024',
     },
+];
+const exhibition2 = [
     {
-        name: ChangSungeun,
-        gallery: gallery1,
-        info: 'testtest',
-        title:'fkfkfkkfk',
-        date:'August 21 – September 22, 2024'
+        name: JohannesDaniel,
+        title:'Platinum Tears',
+        data:'August 30 - September 30, 2024'
     },
 ];
 
@@ -1068,7 +1103,7 @@ const datas = [
         artist: JEONGZIKSEONG,
     },
     {
-        id: 61,
+        id: 62,
         title: '201710 Green Pool, 2017',
         price: 13288000,
         size: '24 1/5 × 27 1/5 in | 61.5 × 69 cm',
@@ -1080,6 +1115,71 @@ const datas = [
         category: 'Painting',
         artist: JEONGZIKSEONG,
     },
+    {
+        id: 63,
+        title: 'Sing me to sleep (humdrum town), 2024',
+        price: 6692200,
+        size: '29 1/2 × 23 3/5 in | 75 × 60 cm',
+        src: JohannesDaniel1,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JohannesDaniel,
+    },
+    {
+        id: 64,
+        title: 'These are the days, 2024',
+        price: 18887000,
+        size: '86 3/5 × 63 in | 220 × 160 cm',
+        src: JohannesDaniel2,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JohannesDaniel,
+    },
+    {
+        id: 65,
+        title: 'My body moves (It goes without me), 2024',
+        price: 18887000,
+        size: '19 7/10 × 15 7/10 in | 50 × 40 cm',
+        src: JohannesDaniel3,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JohannesDaniel,
+    },
+    {
+        id: 66,
+        title: 'End of season (so honest and so perfect), 2023',
+        price: 6692000,
+        size: '29 1/2 × 23 3/5 in | 75 × 60 cm',
+        src: JohannesDaniel4,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'Painting',
+        artist: JohannesDaniel,
+    },
+    {
+        id: 67,
+        title: 'These are the days, 2024',
+        price: 18886000,
+        size: '86 3/5 × 63 in | 220 × 160 cm',
+        src: JohannesDaniel5,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'Painting',
+        artist: JohannesDaniel,
+    },
 ];
 
-export { artists, datas, category, exhibition };
+export { artists, datas, category, exhibition, slide , exhibition2};

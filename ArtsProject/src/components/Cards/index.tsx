@@ -13,6 +13,7 @@ export const Cards = () => {
     return (
         <CardsStyled>
             <h1>EXHIBITION</h1>
+            <div className='bgBox'></div>
             {exhibition.map((exhibit, index) => {
                 const filteredData = filterDatas.find((data) => data.artist.name === exhibit.name.name);
                 return (

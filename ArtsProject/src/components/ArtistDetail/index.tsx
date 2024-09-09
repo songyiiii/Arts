@@ -49,17 +49,18 @@ const ArtistDetail = ({ artistName }: ArtisrPageProps) => {
     console.log(artistInfo, '아티스트인포');
     return (
         <ArtistDetailStyled>
-            <div className='detailTop'>
+            <div className="detailTop">
                 <h1>{artistInfo.name}</h1>
                 <h2>{artistInfo.information}</h2>
                 <h3>{artistInfo.gallery?.name}</h3>
                 <p>{artistInfo.info}</p>
-                <h4>이력</h4>
+
                 {artistInfo.history?.map((x: string) => {
-                return <p>{x}</p>;
-            })}
+                    <h4>이력</h4>;
+                    return <p>{x}</p>;
+                })}
             </div>
-            <h1 className='title'>Artworks</h1>
+            <h1 className="title">Artworks</h1>
             <ArtworkListStyled>
                 {artistData.map((x, i) => {
                     return (

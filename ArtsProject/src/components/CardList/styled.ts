@@ -1,29 +1,33 @@
 import styled from 'styled-components';
 
 export const CardListStyled = styled.div`
-    width: 100%;
-    overflow: hidden;
+    margin: auto;
+    color: white;
     position: relative;
-    margin-bottom: 50px;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    /* background-color: black; */
+    overflow: hidden;
     .slider {
+        width: 100%;
         display: flex;
-        transition: transform 1s ease; /* 부드러운 전환 */
-        will-change: transform; /* 퍼포먼스 향상을 위한 설정 */
+        transition: transform 1.5s ease; /* 부드러운 전환 */
+        will-change: transform;
     }
-
     .hovered {
-        transform: translateX(-300%); /* hover 시 나머지 슬라이드만 이동 */
+        transform: translateX(-700%); /* hover 시 나머지 슬라이드만 이동 */
     }
-
     .slide {
-        width: 100%; /* 슬라이드가 화면을 채우도록 설정 */
+        width: 100%;
+        height: 100%;
         flex-shrink: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        transition: transform 1s ease; /* 슬라이드 이동 애니메이션 */
+        transition: transform 1.5s ease;
         cursor: pointer;
     }
 
@@ -32,28 +36,25 @@ export const CardListStyled = styled.div`
         height: auto;
         object-fit: cover;
     }
-
     .fixed {
-        /* 첫 번째 슬라이드를 고정 */
-        position: absolute; /* 절대 위치 */
-        left: 0; /* 왼쪽에 고정 */
-        top: 0;
-        bottom: 0;
+        position: absolute; 
+        left: 50%; 
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
-        z-index: 0; /* 나머지 슬라이드들보다 위에 보이도록 설정 */
+        height: 100%;
+        z-index: 0; 
     }
-
     .text {
         color: white;
         text-align: center;
         padding: 20px;
-        /* background-color: rgba(0, 0, 0, 0.6); */
         width: 50%;
         height: 100%;
-        text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
     .text p {
         width: 100%;

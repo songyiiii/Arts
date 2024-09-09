@@ -24,7 +24,7 @@ const CardList = ({ imageSrc, galleryName, exhibitionName, exhibitionPeriod }: C
 
             {/* 슬라이드 안에 같은 이미지를 반복해서 넣음 */}
             <div className={`slider ${hover ? 'hovered' : ''}`}>
-                {Array(3).fill(null).map((_, index) => (
+                {Array(7).fill(null).map((_, index) => (
                     <div className="slide" key={index}>
                         <img
                             src={imageSrc}
@@ -39,7 +39,7 @@ const CardList = ({ imageSrc, galleryName, exhibitionName, exhibitionPeriod }: C
                         <p>{galleryName}</p>
                         <p>{exhibitionName}</p>
                         <p>{exhibitionPeriod}</p>
-                        </div>
+                    </div>
                 </div>
             </div>
         </CardListStyled>

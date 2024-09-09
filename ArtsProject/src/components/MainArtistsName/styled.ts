@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const MainAristNameStyled = styled.div`
     width: 50%;
-    height: 500px;
-    padding: 5px;
     animation: none;
     display: flex;
     justify-content: center;
@@ -38,5 +36,13 @@ export const MainAristNameStyled = styled.div`
     }
     p:hover {
         color: gray;
+    }
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        height: 50%;
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        width: 100%;
+        height: 50%;
     }
 `;
