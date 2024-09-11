@@ -4,7 +4,7 @@ import { ArtworkDetailTopStyled } from './styled';
 
 interface artworkProps {
     artwork: {
-        artist: { name: string; info?: string; company?:string};
+        artist: { name: string; info?: string; company?: string };
         category: string;
         frame: string;
         id: number;
@@ -34,7 +34,13 @@ const ArtworkDetailTop = ({ artwork }: artworkProps) => {
     return (
         <ArtworkDetailTopStyled>
             <div className="imgBox">
-                <Image src={artwork.src.src} alt={artwork.title} />
+                <Image.PreviewGroup
+                    preview={{
+                        zIndex: 10000000000, // header보다 높은 z-index 설정
+                    }}
+                >
+                    <Image src={artwork.src.src} alt={artwork.title} className='img'/>
+                </Image.PreviewGroup>
             </div>
             <div className="buyBox">
                 <div className="textBox">
@@ -58,6 +64,7 @@ const ArtworkDetailTop = ({ artwork }: artworkProps) => {
                     open={isModalOpen}
                     onOk={handleOk}
                     onCancel={handleCancel}
+                    style={{ zIndex: 1050 }}
                 >
                     <p>준비중입니다</p>
                 </Modal>

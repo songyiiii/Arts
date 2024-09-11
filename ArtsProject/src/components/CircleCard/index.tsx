@@ -1,15 +1,24 @@
 import CircleCardList from '../CircleCardList';
 import { CircleCardStyled } from './styled';
-import { exhibition, datas } from '@/utill/datas';
+interface ArtistData {
+    artist: {
+        name: string;
+        gallery?: {
+            name: string;
+        };
+    };
+    src: {
+        src: string;
+    };
+    title: string;
+}
 
 interface CircleCardProps {
-    onHover: (artistData: ArtistData) => void; // ArtistData로 타입 지정
+    onHover: (artistData: ArtistData) => void; 
     uniqueArtists: (ArtistData | undefined)[];
 }
 
-const CircleCard: React.FC<CircleCardProps> = ({ onHover, uniqueArtists, }) => {
-
-
+const CircleCard: React.FC<CircleCardProps> = ({ onHover, uniqueArtists }) => {
     return (
         <CircleCardStyled>
             {uniqueArtists.map((x) => {
@@ -18,7 +27,7 @@ const CircleCard: React.FC<CircleCardProps> = ({ onHover, uniqueArtists, }) => {
                         key={x.title}
                         imgSrc={x.src.src}
                         title={x.title}
-                        onHover={() => onHover(x)} 
+                        onHover={() => onHover(x)}
                     />
                 ) : null;
             })}

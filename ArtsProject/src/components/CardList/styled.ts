@@ -12,35 +12,36 @@ export const CardListStyled = styled.div`
     .slider {
         width: 100%;
         display: flex;
-        transition: transform 1.5s ease; 
+        transition: transform 1.5s ease;
+        .slide {
+            width: 100%;
+            height: 250px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: transform 1.5s ease;
+            cursor: pointer;
+        }
     }
     .hovered {
-        transform: translateX(-700%); 
-    }
-    .slide {
-        width: 100%;
-        height: 250px;
-        flex-shrink: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        transition: transform 1.5s ease;
-        cursor: pointer;
+        transform: translateX(-700%);
     }
 
-    .image {
-        height: 300px;
-        object-fit: cover;
-    }
     .fixed {
-        position: absolute; 
-        left: 50%; 
+        position: absolute;
+        left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         height: 300px;
-        z-index: 0; 
+        z-index: 0;
+        
     }
+    .image {
+            height: 300px;
+            object-fit: cover;
+        }
     .text {
         color: white;
         text-align: center;
@@ -51,19 +52,17 @@ export const CardListStyled = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .text p {
-        width: 100%;
-        line-height: 1.5;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3),
-            /* 약한 그림자 */ 2px 2px 5px rgba(0, 0, 0, 0.2),
-            /* 약간 더 깊은 그림자 */ -1px -1px 2px rgba(255, 255, 255, 0.1);
-    }
-    .text p:nth-child(1) {
-        font-size: 1.3rem;
-    }
-    .text p:nth-child(2) {
-        font-size: 1.1rem;
-    }
+        p {
+            font-size: 2rem;
+            width: 100%;
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3),
+                /* 약한 그림자 */ 2px 2px 5px rgba(0, 0, 0, 0.2),
+                /* 약간 더 깊은 그림자 */ -1px -1px 2px rgba(255, 255, 255, 0.1);
+                &:nth-of-type(2) {
+                    background-color: gray;
+                }
+        }
 
+    }
 `;

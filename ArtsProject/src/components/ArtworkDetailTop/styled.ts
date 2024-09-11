@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ArtworkDetailTopStyled = styled.div`
     width: 95%;
     margin: 30px auto;
-    
     .buyBox {
         display: flex;
         flex-direction: column;

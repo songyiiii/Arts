@@ -31,7 +31,7 @@ const ArtworkItem = ({
     return (
         <ArtworkItemStyled>
             <Link  href={`/artwork/${title}`} className="customLink">
-                <div className="img">
+                <div className="img" >
                     <img
                         onMouseMove={handleMouseMove}
                         style={{
