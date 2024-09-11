@@ -32,7 +32,7 @@ export const MainAristNameStyled = styled.div`
         }
     }
     p.blink {
-        animation: blink 1s linear 5s;
+        animation: blink 5s linear;
     }
     p:hover {
         color: gray;

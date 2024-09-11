@@ -5,7 +5,7 @@ export const AboutStyled = styled.div`
     background: linear-gradient(135deg, #ffffff 0%, #eeeeee 100%);
     .AboutTop {
         padding-top: 50px;
-        margin-bottom: 100px;
+        margin-bottom: 120px;
         align-items: center;
         animation: fadeInUp 1.2s ease-out;
         @keyframes fadeInUp {
@@ -27,26 +27,30 @@ export const AboutStyled = styled.div`
                 border-radius: 30px 0 0 0;
                 width: 80% !important;
             }
+            h1 {
+                font-size: 5rem;
+            }
+            h2 {
+                font-size: 4rem;
+            }
             h1,
             h2 {
                 position: absolute;
-                font-size: 5rem;
                 color: white;
                 background: linear-gradient(to right, black, white);
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent; 
+                -webkit-text-fill-color: transparent;
             }
             h1 {
                 width: 100%;
-                top: 60%;
+                top: 70%;
                 left: 0%;
                 transform: translate(-50%-50%);
             }
             h2 {
                 width: 100%;
-                top: 80%;
-                left: 0%;
-                /* transform: translate(-50%,-30%); */
+                bottom: 0;
+                line-height: 0.9;
             }
         }
         .aboutText {
@@ -54,6 +58,53 @@ export const AboutStyled = styled.div`
             p {
                 line-height: 1.6;
                 font-size: 1.1rem;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .AboutTop {
+            .imgBox {
+                h1,
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+            .aboutText {
+                p {
+                    line-height: 1.3;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        .AboutTop {
+            .imgBox {
+                h1 {
+                    top: 65%;
+                    font-size: 3rem;
+                }
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+            .aboutText {
+                p {
+                    line-height: 1.4;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .AboutTop {
+            .imgBox {
+                h1 {
+                    top: 70%;
+                }
+                h2 {
+                    font-size: 3rem;
+                }
             }
         }
     }

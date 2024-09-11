@@ -69,7 +69,13 @@ import JohannesDaniel2 from '../assets/image/JohannesDaniel2.png';
 import JohannesDaniel3 from '../assets/image/JohannesDaniel3.png';
 import JohannesDaniel4 from '../assets/image/JohannesDaniel4.png';
 import JohannesDaniel5 from '../assets/image/JohannesDaniel5.png';
-import { title } from 'process';
+import JungHyukPARK1 from '../assets/image/JungHyukPARK1.png';
+import JungHyukPARK2 from '../assets/image/JungHyukPARK2.png';
+import KIMIlChi1 from '../assets/image/KIMIlChi1.png';
+import KIMIlChi2 from '../assets/image/KIMIlChi2.png';
+import HwiyeonKim1 from '../assets/image/HwiyeonKim1.png'
+import HwiyeonKim2 from '../assets/image/HwiyeonKim2.png'
+import HwiyeonKim3 from '../assets/image/HwiyeonKim3.png'
 
 const slide = [
     {
@@ -101,6 +107,15 @@ const gallery5 = {
     name: 'Rutger Brandt Gallery',
     info: 'Rutger Brandt Gallery는 사회적으로 참여하고 내러티브한 현대 미술을 선보이는 데 전념하며, 다세대 프로그램에서 떠오르는 젊은 아티스트와 이미 자리를 잡은 국제 아티스트를 모두 선보입니다. 저희의 사명은 현 시대 정신을 반영하는 현대 정치와 현대적 주제를 다루는 생각을 자극하는 작품을 만드는 아티스트를 홍보하는 것입니다. 저희의 다양한 아티스트는 현대 사회의 소외, 고립, 부조리와 같은 인간 경험과 관계의 다양한 측면을 탐구합니다. 다양한 매체를 사용하여 저희 아티스트는 전통적인 표현 형식에 도전하고 일상 생활의 예상치 못한 측면을 밝혀 자기 반성과 세계적 인식을 장려합니다',
 };
+const gallery6 = {
+    name: 'Artbn',
+    info: 'ARTBN은 2007년에 설립된 새로운 예술 프로젝트 및 매니지먼트 그룹입니다. 우리는 all for arts를 기반으로 21세기 글로벌 시대에 표현되는 다양성과 차별화를 추구하며 문화적, 예술적 감성을 기반으로 한 예술 프로젝트를 진행하고 있습니다. ARTBN은 창의성, 독창성, 시작이라는 의미를 담고 있습니다. 2015년 우리는 서울 삼청동의 아트 허브 지역 중심에 새로운 공간을 열었습니다. 우리는 다양한 분야의 예술가들의 광범위한 예술 프로젝트와 전시를 선보입니다. 우리의 사명은 민간 및 공공 부문 모두를 위해 현대 미술을 교차문화적으로 홍보하는 것입니다. 또한 우리는 다른 독립 큐레이터, 갤러리, 박물관, 사립 기관 및 기업 그룹과 협력할 수 있는 환경을 적극적으로 장려합니다',
+};
+const gallery7 = {
+    name:'AVO',
+    info:'2024년 서울에서 창립한 AUGUST VIBES ONLY는 누구나 쉽게 전시를 즐길 수 있는 아트 스페이스를 운영하고 있습니다. 갤러리 내 현대 미술 전시뿐만 아니라 다양한 기업과의 협업, 신뢰할 수 있는 아트 자문, 개인 소장품 판매를 통해 대중에게 다가가 사람들이 예술에 참여할 수 있도록 돕고 작가들에게 풍부한 기회를 제공하고자 노력합니다. 잠재적인 작가를 육성하는 매니지먼트 프로젝트를 구축하고 컬렉터의 요구에 부합하는 온라인 마켓플레이스를 구축하여 한국 미술 시장의 확대와 글로벌 미술계 진출에 기여하는 아트 컴퍼니로 나아갈 계획입니다'
+
+}
 const AlanFears = {
     name: 'Alan Fears',
     info: '앨런 피어스는 영국의 신진 예술가입니다. "순진한 예술가, 그래픽 아티스트, 팝 아티스트... 저는 이 둘의 일부입니다." 피어스가 말했습니다. "제 스타일은 단순하고 직접적입니다. 제 예술의 대부분 주제는 저 자신과 다른 모든 사람에게 인간이 얼마나 위대하고 어리석을 수 있는지, 그리고 따라서 삶이 얼마나 위대하고 어리석을 수 있는지 상기시키는 것입니다." 피어스는 2018년과 2020년에 모두 최고의 현대 회화에 수여되는 존 무어스 회화상 후보에 올랐습니다. 그의 작품은 문학 및 예술 잡지인 The Paris Review 의 2019년 여름호 표지에 실렸습니다 .',
@@ -246,6 +261,22 @@ const JohannesDaniel = {
     gallery: gallery5,
     info: '요하네스 다니엘은 라이프치히에 거주하는 독일 예술가로, 조각난 인간 형상을 묘사한 대규모 그래픽 페인팅을 제작합니다. 그는 유동적인 선과 파스텔 컬러를 통해 몽환적인 액체 세계를 그리며, 거친 그래피티와 도시적 미학과 대조를 이룹니다.',
 };
+const JungHyukPARK = {
+    name: 'Jung Hyuk PARK',
+    information: 'South Korean',
+    gallery: gallery6,
+};
+const KIMIlChi = {
+    name: 'KIM Il Chi',
+    information: 'Korean',
+    gallery: gallery6,
+};
+const HwiyeonKim = {
+    name:'Hwiyeon Kim',
+    information:'b. 1999',
+    gallery:gallery7,
+
+}
 const artists = [
     AlanFears,
     CarstenBeck,
@@ -272,6 +303,9 @@ const artists = [
     JungChoonpyo,
     JEONGZIKSEONG,
     JohannesDaniel,
+    JungHyukPARK,
+    KIMIlChi,
+    HwiyeonKim
 ];
 const category = [
     'painting',
@@ -289,13 +323,24 @@ const exhibition = [
         title: 'Layered Life',
         date: 'August 21 – September 22, 2024',
     },
-];
-const exhibition2 = [
     {
         name: JohannesDaniel,
-        title:'Platinum Tears',
-        data:'August 30 - September 30, 2024'
+        title: 'Platinum Tears',
+        data: 'August 30 - September 30, 2024',
     },
+    {
+        name: JungHyukPARK,
+        gallery: gallery6,
+        title: 'BUBBLES PLUS +',
+        info: '이번 버블플러스+ 전시는 2024년 새해맞이 기획전 "럭키버블쇼"에 참여했던 작가의 추천으로 진행되는 릴레이 특별전입니다.',
+        date: 'August 28 – September 14, 2024',
+    },
+    {
+        name:HwiyeonKim,
+        gallery:gallery7,
+        title:'FINGERPRINT',
+        info:''
+    }
 ];
 
 const datas = [
@@ -1176,10 +1221,101 @@ const datas = [
         frame: 'Not included',
         materials: 'Oil on canvas',
         rarity: 'Unique',
-        release: 2023,
+        release: 2024,
         category: 'Painting',
         artist: JohannesDaniel,
     },
+    {
+        id: 68,
+        title: 'Park_s land 39, 2024',
+        price: 5377700,
+        size: '23 3/5 in diameter | 60 cm diameter',
+        src: JungHyukPARK1,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JungHyukPARK,
+    },
+    {
+        id: 69,
+        title: 'Park_s land 40, 2024',
+        price: 5377700,
+        size: '23 3/5 in diameter | 60 cm diameter',
+        src: JungHyukPARK2,
+        frame: 'Not included',
+        materials: 'Oil on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: JungHyukPARK,
+    },
+    {
+        id: 70,
+        title: 'Eerolling, 2023',
+        price: 1075000,
+        size: '15 7/10 in diameter | 40 cm diameter',
+        src: KIMIlChi1,
+        frame: 'Not included',
+        materials: 'Acrylic on canvas',
+        rarity: 'Unique',
+        release: 2023,
+        category: 'Painting',
+        artist: KIMIlChi,
+    },
+    {
+        id: 71,
+        title: 'Evolling, 2024',
+        price: 2016000,
+        size: '23 3/5 in diameter | 60 cm diameter',
+        src: KIMIlChi2,
+        frame: 'Not included',
+        materials: 'Acrylic on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: KIMIlChi,
+    },
+    {
+        id: 72,
+        title: 'Face-to-Face 1, 2024',
+        price: 510900,
+        size: '13 1/10 × 9 1/2 in | 33.4 × 24.2 cm',
+        src: HwiyeonKim1,
+        frame: 'Not included',
+        materials: 'Acrylic on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: HwiyeonKim,
+    },
+    {
+        id: 73,
+        title: 'Layers of Trace 2, 2024',
+        price: 605000,
+        size: '16 1/10 × 12 1/2 in | 40.9 × 31.8 cm',
+        src: HwiyeonKim2,
+        frame: 'Not included',
+        materials: 'Acrylic on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: HwiyeonKim,
+    },
+    {
+        id: 73,
+        title: 'Layers of Trace 3, 2024',
+        price: 510900,
+        size: '16 1/10 × 12 1/2 in | 40.9 × 31.8 cm',
+        src: HwiyeonKim3,
+        frame: 'Not included',
+        materials: 'Acrylic on canvas',
+        rarity: 'Unique',
+        release: 2024,
+        category: 'Painting',
+        artist: HwiyeonKim,
+    },
 ];
 
-export { artists, datas, category, exhibition, slide , exhibition2};
+export { artists, datas, category, exhibition, slide };

@@ -45,7 +45,7 @@ const ArtistDetail = ({ artistName }: ArtisrPageProps) => {
 
     const artistInfo: Artist | undefined = artistData[0]?.artist;
 
-    console.log(artistInfo, '아티스트인포');
+    // console.log(artistInfo, '아티스트인포');
     return (
         <ArtistDetailStyled>
             <div className="detailTop">
@@ -54,14 +54,18 @@ const ArtistDetail = ({ artistName }: ArtisrPageProps) => {
                 <h3>{artistInfo.gallery?.name}</h3>
                 <p>{artistInfo.info}</p>
 
-                {artistInfo.history?.map((x: string, i) => {
-                    return (
-                        <div key={i}>
-                            <h4>이력</h4>
-                            <p>{x}</p>
-                        </div>
-                    );
-                })}
+                {artistInfo.history && artistInfo.history.length > 0 && (
+                    <div>
+                        <h4>이력</h4>
+                        {artistInfo.history.map((x: string, i) => {
+                            return (
+                                <div key={i}>
+                                    <p>{x}</p>
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
             </div>
             <h1 className="title">Artworks</h1>
             <ArtworkListStyled>

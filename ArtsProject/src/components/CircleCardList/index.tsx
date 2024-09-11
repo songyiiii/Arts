@@ -1,15 +1,19 @@
 import { CircleCardListStyled } from './styled';
 interface CircleCardProps {
-    imgSrc:string
-    title:string
-    
+    imgSrc: string;
+    title: string;
+    onHover: () => void; // hover 시 호출할 함수
 }
-const CircleCardList = ({imgSrc,title}:CircleCardProps) => {
-    // console.log(data,'데이터')
-    return <CircleCardListStyled title={title}>
-        <div className='list'>
-            <div className='listImg'><img src={imgSrc} alt={title}></img></div>
-        </div>
-    </CircleCardListStyled>;
+const CircleCardList: React.FC<CircleCardProps> = ({ imgSrc, title, onHover }) => {
+    return (
+        <CircleCardListStyled
+            title={title}
+            onMouseEnter={onHover} // hover 시 onHover 함수 호출
+        >
+            <div className='list'>
+                <div className='listImg'><img src={imgSrc} alt={title} /></div>
+            </div>
+        </CircleCardListStyled>
+    );
 };
 export default CircleCardList;

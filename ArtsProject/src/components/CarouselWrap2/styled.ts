@@ -6,7 +6,7 @@ export const CarouselWrap2Styled = styled.div`
     margin-top: 62px;
     .swiper {
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         overflow: hidden;
     }
     .swiper-slide {
@@ -17,7 +17,7 @@ export const CarouselWrap2Styled = styled.div`
         cursor: pointer;
         .mainSlide {
             width: 100%;
-            height: 90%;
+            height: 100%;
             position: relative;
             color: white;
             text-align: left;
@@ -32,16 +32,15 @@ export const CarouselWrap2Styled = styled.div`
             }
             .textBox1,
             .textBox2 {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
                 color: white;
                 position: absolute;
                 left: 0;
                 z-index: 10000;
-                opacity: 0;
-                background-color: black;
                 width: 100%;
                 animation: scroll-text 30s linear infinite;
                 white-space: nowrap;
+                opacity: 0;
             }
             .textBox1 {
                 top: 0;

@@ -6,27 +6,27 @@ import Category from '../Category';
 import ReactPaginate from 'react-paginate';
 import styles from './styles.module.css';
 import { SearchOutlined } from '@ant-design/icons';
-import { Button, Flex, Tooltip, Input } from 'antd';
+import { Button, Tooltip, Input } from 'antd';
 import { useFormik } from 'formik';
 
 const ArtworkList = () => {
     //카테고리 저장
     const [selectCategory, setSelectCategory] = useState<string | null>(null);
     //검색어 상태
-    const [submittedSearch, setSubmittedSearch] = useState<string>('');
-    //현재 페이지 상태 저장
+    const [search, setSearch] = useState<string>('');
+    //현재 페이지 상태 저장(첫번째페이지로 설정)
     const [currentPage, setCurrentPage] = useState<number>(0);
     //한페이지에 몇개보여줄건지
     const itemsPerPage = 9;
 
     const formik = useFormik({
         initialValues: {
-            search: '', // 검색어 초기값
-            sortOption: 'latest', // 정렬 옵션 초기값
+            search: '', 
+            sortOption: 'latest', 
         },
         onSubmit: (values) => {
-            setSubmittedSearch(values.search); // 검색어 제출
-            setCurrentPage(0); // 검색 시 첫 페이지로 이동
+            setSearch(values.search); 
+            setCurrentPage(0); 
         },
     });
     // console.log(selectCategory,'셀렉카테고리')
@@ -39,18 +39,18 @@ const ArtworkList = () => {
                 data.category !== selectCategory
             ) {
                 return false;
-            } // 검색어 필터 적용 (작가 이름 또는 제목에 검색어 포함)
+            } 
             return (
                 data.title
-                    .toLowerCase() //소문자로 변경(검색비교를위해)
-                    .includes(submittedSearch.toLowerCase()) ||
+                //문자열 소문자로 변환
+                    .toLowerCase()
+                    .includes(search.toLowerCase()) ||
                 data.artist.name
                     .toLowerCase()
-                    .includes(submittedSearch.toLowerCase())
+                    .includes(search.toLowerCase())
             );
         })
         .sort((a, b) =>
-            // 정렬 옵션에 따라 데이터 정렬
             formik.values.sortOption === 'latest'
                 ? b.release - a.release
                 : formik.values.sortOption === 'priceAsc'
@@ -60,10 +60,13 @@ const ArtworkList = () => {
                 : 0
         );
 
-    // 현재 페이지에 해당하는 항목만 추출
+
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    console.log(indexOfFirstItem,'펄스트')
+    console.log(indexOfLastItem,'라스트')
     const currentItems = filterData.slice(indexOfFirstItem, indexOfLastItem);
+    console.log(currentItems,'커런트')
 
     // 총 페이지 수 계산
     const pageCount = Math.ceil(filterData.length / itemsPerPage);
@@ -88,9 +91,8 @@ const ArtworkList = () => {
                     className={styles.input}
                     placeholder="Search by artist or title"
                     value={formik.values.search}
-                    onChange={formik.handleChange} // Formik의 handleChange로 입력 관리
-                    onKeyDown={handleKeyPress}  // 엔터키로 제출
-                    // style={{ width: 200, marginRight: 8 }}
+                    onChange={formik.handleChange} 
+                    onKeyDown={handleKeyPress} 
                 />
                 <Tooltip title="search" className={styles.button}>
                     <Button
@@ -102,7 +104,7 @@ const ArtworkList = () => {
                 <select
                     name="sortOption"
                     value={formik.values.sortOption}
-                    onChange={formik.handleChange} // 정렬 옵션도 Formik에서 관리
+                    onChange={formik.handleChange} 
                     className={styles.select}
                 >
                     <option value="latest">최신순</option>

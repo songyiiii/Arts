@@ -7,15 +7,17 @@ import ArtworkItem from '../ArtwrokItem';
 import { ArtworkListStyled } from '../ArtworkList/styled';
 
 const ArtworkDetail = () => {
+    //라우터설정
     const router = useRouter();
     const { title } = router.query;
 
     const artwork = datas.find((item) => item.title === title);
 
-    console.log(artwork, '아트워크확인ㄹ아ㅣ눙힌');
+    // console.log(artwork, '아트워크확인ㄹ아ㅣ눙힌');
     if (!artwork) {
         return <div>Artwork not found</div>;
     }
+    //현재페이지의 작품을 제외한 동일 아티스트의 작품 저장
     const otherArtworks = datas.filter(
         (item) =>
             item.artist.name === artwork.artist.name && item.title !== title
@@ -24,9 +26,7 @@ const ArtworkDetail = () => {
     return (
         <ArtworkDetailStyled>
             <ArtworkDetailTop artwork={artwork}></ArtworkDetailTop>
-            <ArtworkDetailBottom artwork={artwork}>
-
-            </ArtworkDetailBottom>
+            <ArtworkDetailBottom artwork={artwork} />
             {otherArtworks.length > 0 && (
                 <div className='other'>
                     <h1>Other works by this artist</h1>

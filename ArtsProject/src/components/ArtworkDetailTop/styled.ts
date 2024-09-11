@@ -50,13 +50,14 @@ export const ArtworkDetailTopStyled = styled.div`
     @media screen and (max-width: 768px) {
         display: block;
         .imgBox {
+            overflow: hidden;
             width: 100%;
             background-color: aliceblue;
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
             img {
-                width: 150%;
+                width: 100%;
             }
             img:hover {
                 cursor: zoom-in;

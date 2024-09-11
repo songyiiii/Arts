@@ -2,7 +2,6 @@ import { MapTextStyled } from './styled';
 
 const MapText = () => {
     return <MapTextStyled>
-        <h1>GangNam</h1>
         <p><span>ADDRESS:</span>서울 강남구 강남대로 396</p>
         <p><span>EMAIL:</span>arts@arts.com</p>
         <p><span>TEL:</span>02-0000-0000</p>

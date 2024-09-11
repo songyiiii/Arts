@@ -15,11 +15,12 @@ export const CircleCardListStyled = styled.div`
         position: relative;
         animation: slideIn 1s ease-out;
         .listImg {
-            border: 5px solid #000; /* 테두리 */
+            border: 5px solid #000; 
             width: 100%;
-            /* background-color: green; */
             img {
                 width: 100%;
+                /* border-radius: 50%; */
+                cursor: pointer;
             }
         }
     }

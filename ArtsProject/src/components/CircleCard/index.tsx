@@ -1,19 +1,28 @@
 import CircleCardList from '../CircleCardList';
 import { CircleCardStyled } from './styled';
-import { exhibition2,datas } from '@/utill/datas';
+import { exhibition, datas } from '@/utill/datas';
 
-const CircleCard = () => {
-    // console.log(datas,'데이터스')
-    // console.log(exhibition2 ,'전시2')
-    const exhibitionArtist = exhibition2.map((data) => data.name.name)
-    const filterDatas = datas.filter((data) =>
-        exhibitionArtist.includes(data.artist.name)
-    );    console.log(filterDatas,'필터데이터')
+interface CircleCardProps {
+    onHover: (artistData: any) => void; // hover 시 데이터를 전달하는 함수
+}
+
+const CircleCard: React.FC<CircleCardProps> = ({ onHover }) => {
+    const exhibitionArtist = exhibition.map((data) => data.name.name);
+    const uniqueArtists = exhibitionArtist.map((artistName) =>
+        datas.find((data) => data.artist.name === artistName)
+    );
+
     return (
         <CircleCardStyled>
-            {filterDatas?.map((x, i) => {
-                // console.log(x,'dprtm')
-                return <CircleCardList   imgSrc={x.src.src} title={x.title} key={x.title}/>;
+            {uniqueArtists.map((x) => {
+                return x ? (
+                    <CircleCardList
+                        key={x.title}
+                        imgSrc={x.src.src}
+                        title={x.title}
+                        onHover={() => onHover(x)} // hover 이벤트 발생 시 부모 컴포넌트에 전달
+                    />
+                ) : null;
             })}
         </CircleCardStyled>
     );

@@ -8,20 +8,19 @@ export const CardListStyled = styled.div`
     display: flex;
     align-items: center;
     width: 50%;
-    /* background-color: black; */
     overflow: hidden;
     .slider {
         width: 100%;
         display: flex;
-        transition: transform 1.5s ease; /* 부드러운 전환 */
+        transition: transform 1.5s ease; 
         will-change: transform;
     }
     .hovered {
-        transform: translateX(-700%); /* hover 시 나머지 슬라이드만 이동 */
+        transform: translateX(-700%); 
     }
     .slide {
         width: 100%;
-        height: 100%;
+        height: 250px;
         flex-shrink: 0;
         display: flex;
         justify-content: center;
@@ -32,8 +31,7 @@ export const CardListStyled = styled.div`
     }
 
     .image {
-        width: 100%;
-        height: auto;
+        height: 300px;
         object-fit: cover;
     }
     .fixed {
@@ -41,8 +39,7 @@ export const CardListStyled = styled.div`
         left: 50%; 
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
+        height: 300px;
         z-index: 0; 
     }
     .text {
@@ -69,7 +66,6 @@ export const CardListStyled = styled.div`
     .text p:nth-child(2) {
         font-size: 1.1rem;
     }
-    /* 각 슬라이드의 전환 지연 설정 */
     .slide:nth-child(1) {
         transition-delay: 0.1s;
     }

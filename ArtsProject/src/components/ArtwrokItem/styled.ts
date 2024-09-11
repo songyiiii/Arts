@@ -35,7 +35,7 @@ export const ArtworkItemStyled = styled.div`
 
     }
     .customLink {
-        text-decoration: none; /* 링크 밑줄 없애기 */
-        color: inherit; /* 텍스트 색상을 상속받도록 설정 */
+        text-decoration: none; 
+        color: inherit;
     }
 `;

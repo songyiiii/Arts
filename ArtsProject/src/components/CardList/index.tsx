@@ -12,7 +12,6 @@ const CardList = ({ imageSrc, galleryName, exhibitionName,  }: CardsProps) => {
 
     return (
         <CardListStyled
-            // className="sliderContainer"
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
