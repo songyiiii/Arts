@@ -18,7 +18,7 @@ interface ArtistData {
 }
 const Exhibition = () => {
     const exhibitionArtist = exhibition.map((data) => data.name.name);
-    // console.log(exhibitionArtist,'전시작가')
+    console.log(exhibitionArtist,'ddd')
     const uniqueArtists = exhibitionArtist.map((artistName) =>
         datas.find((data) => data.artist.name === artistName)
     );
@@ -34,12 +34,10 @@ const Exhibition = () => {
     };
     return (
         <>
-         {currentArtist && (
+            {currentArtist && (
                 <ExhibitionStyled>
                     <h1>EXHIBITION</h1>
                     <div className="bgBox">
-                        {/* <p>{currentArtist.title}</p>
-                        <p>{currentArtist.artist.gallery?.name }</p> */}
                     </div>
                     <CardList
                         key={currentArtist.title}
@@ -53,9 +51,11 @@ const Exhibition = () => {
             )}
 
             {/* CircleCard에서 hover된 아티스트 데이터를 CardList로 전달 */}
-            <CircleCard onHover={handleHover} />
+            <CircleCard
+                onHover={handleHover}
+                uniqueArtists={uniqueArtists}
+            />
         </>
-           
     );
 };
 export default Exhibition;

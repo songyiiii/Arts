@@ -19,7 +19,6 @@ const CardList = ({ imageSrc, galleryName, exhibitionName,  }: CardsProps) => {
             <div className="fixed">
                 <img src={imageSrc} alt="Fixed Slide" className="image" />
             </div>
-
             {/* 슬라이드 안에 같은 이미지를 반복해서 넣음 */}
             <div className={`slider ${hover ? 'hovered' : ''}`}>
                 {Array(7).fill(null).map((_, index) => (

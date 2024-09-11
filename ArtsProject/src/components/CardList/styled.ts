@@ -13,7 +13,6 @@ export const CardListStyled = styled.div`
         width: 100%;
         display: flex;
         transition: transform 1.5s ease; 
-        will-change: transform;
     }
     .hovered {
         transform: translateX(-700%); 
@@ -66,19 +65,5 @@ export const CardListStyled = styled.div`
     .text p:nth-child(2) {
         font-size: 1.1rem;
     }
-    .slide:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-    .slide:nth-child(2) {
-        transition-delay: 0.2s;
-    }
-    .slide:nth-child(3) {
-        transition-delay: 0.3s;
-    }
-    .slide:nth-child(4) {
-        transition-delay: 0.4s;
-    }
-    .slide:nth-child(5) {
-        transition-delay: 0.5s;
-    }
+
 `;

@@ -19,8 +19,11 @@ export const CircleCardListStyled = styled.div`
             width: 100%;
             img {
                 width: 100%;
-                /* border-radius: 50%; */
                 cursor: pointer;
+            }
+            img:hover{
+                opacity: 0.5;
+                transition: 0.5s;
             }
         }
     }

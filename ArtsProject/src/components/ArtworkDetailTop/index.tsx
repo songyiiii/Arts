@@ -34,7 +34,7 @@ const ArtworkDetailTop = ({ artwork }: artworkProps) => {
     return (
         <ArtworkDetailTopStyled>
             <div className="imgBox">
-                <Image src={artwork.src.src} alt={artwork.title}/>
+                <Image src={artwork.src.src} alt={artwork.title} />
             </div>
             <div className="buyBox">
                 <div className="textBox">
