@@ -67,6 +67,7 @@ export const ArtworkDetailTopStyled = styled.div`
             width: 100%;
         }
         .btnBox {
+            
             display: flex;
         }
     }
