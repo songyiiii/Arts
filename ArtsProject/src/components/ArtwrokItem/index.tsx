@@ -1,8 +1,6 @@
 import { ArtworkItemStyled } from './styled';
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-
 
 interface ArtworkItemProps {
     id: number;
@@ -25,7 +23,6 @@ const ArtworkItem = ({
         // getBoundingClientRect():dom요소의 위치와 크기를 가져옴
         const { left, top, width, height } =
             e.currentTarget.getBoundingClientRect();
-        // console.log(e, 'e확인!!');
         const x = ((e.clientX - left) / width) * 100;
         const y = ((e.clientY - top) / height) * 100;
         setPosition({ x, y });

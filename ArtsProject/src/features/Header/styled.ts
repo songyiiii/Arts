@@ -28,6 +28,7 @@ export const HeaderStyled = styled.div<HeaderProps>`
 
         .logo {
             h1 {
+                cursor: pointer;
                 font-size: 2.2rem;
                 color: ${({ scroll }) =>
                     scroll ? 'white' : 'black'}; /* 로고 색상 변경 */

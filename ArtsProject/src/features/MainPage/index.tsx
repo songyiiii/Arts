@@ -1,62 +1,56 @@
 import { MainPageStyled } from './styled';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import MainArtists from '@/components/MainArtists';
 import CarouselWrap2 from '@/components/CarouselWrap2';
-import { Cards } from '@/components/Cards';
-import CircleCard from '@/components/CircleCard';
+import Exhibition from '@/components/\bExhibition';
 
 const MainPage = () => {
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const [visibleSections, setVisibleSections] = useState<Record<number, boolean>>({});
 
+    // 스크롤 이벤트 핸들러
+    const handleScroll = () => {
+        const updatedVisibleSections: Record<number, boolean> = {};
+        sectionRefs.current.forEach((section, index) => {
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                updatedVisibleSections[index] = isVisible;
+            }
+        });
+        setVisibleSections(updatedVisibleSections);
+    };
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                    } else {
-                        entry.target.classList.remove('show');
-                    }
-                });
-            },
-            { threshold: 0.3 } // 20% 보이면 트리거
-        );
-
-        // DOM 요소만 observe
-        sectionRefs.current.forEach((section) => {
-            if (section) observer.observe(section);
-        });
+        // 스크롤 이벤트 등록
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // 초기 렌더링 시 한 번 호출
 
         return () => {
-            sectionRefs.current.forEach((section) => {
-                if (section) observer.unobserve(section); // 요소가 null이 아닐 때만 unobserve
-            });
+            window.removeEventListener('scroll', handleScroll); // 컴포넌트 언마운트 시 이벤트 제거
         };
     }, []);
 
     return (
         <MainPageStyled>
             <div
-                className="carousel-section"
+                className={`carousel-section ${visibleSections[0] ? 'show' : ''}`}
                 ref={(el) => (sectionRefs.current[0] = el)}
             >
                 <CarouselWrap2 />
             </div>
 
             <div
-                className="section artists"
-                ref={(el) => (sectionRefs.current[1] = el)} // 배열의 첫 번째 요소로 할당
+                className={`section artists ${visibleSections[1] ? 'show' : ''}`}
+                ref={(el) => (sectionRefs.current[1] = el)}
             >
                 <MainArtists />
             </div>
-            <div className="box"></div>
             <div
-                className="section cards"
-                ref={(el) => (sectionRefs.current[2] = el)} // 배열의 두 번째 요소로 할당
+                className={`section cards ${visibleSections[2] ? 'show' : ''}`}
+                ref={(el) => (sectionRefs.current[2] = el)}
             >
-                <Cards />
-                <CircleCard />
+                <Exhibition />
             </div>
         </MainPageStyled>
     );

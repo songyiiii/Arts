@@ -22,7 +22,7 @@ export const MainPageStyled = styled.div`
         color: white;
         text-align: center;
         transition: transform 1s ease-out;
-        transform: translateY(20vh); 
+        transform: translateY(30vh); 
         opacity: 0; 
         overflow: hidden;
     }
@@ -35,6 +35,6 @@ export const MainPageStyled = styled.div`
     .cards {
         background-color: black;
         display: block;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
 `;
