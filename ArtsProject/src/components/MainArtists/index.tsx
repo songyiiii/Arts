@@ -3,7 +3,7 @@ import { MainArtistsStyled } from './styled';
 import { artists, datas } from '@/utill/datas';
 import MainArtistsImg from '../MainArtistsImg';
 import MainArtistName from '../MainArtistsName';
-import { useRouter } from 'next/router';
+
 
 interface AnimationTimings {
     delay: string;
@@ -18,7 +18,6 @@ const MainArtists = () => {
     const [animationTimings, setAnimationTimings] = useState<
         Record<number, AnimationTimings>
     >({});
-    const router = useRouter();
     // 아티스트 이름 hover 시 이미지 보여주기
     const NameHover = (artistName: string) => {
         const artistData = datas.find(
@@ -28,7 +27,6 @@ const MainArtists = () => {
             setHoverName(artistData.src.src);
         }
     };
-
     // 애니메이션 딜레이를 처음에 한 번만 설정
     useEffect(() => {
         const timings: Record<number, AnimationTimings> = {};
@@ -39,7 +37,6 @@ const MainArtists = () => {
         setAnimationTimings(timings);
     }, []);
 
-    // console.log(animationTimings,'타이밍스')
     // 스크롤 이벤트로 아티스트 이름 가시성 체크
     useEffect(() => {
         const handleScroll = () => {
@@ -47,14 +44,17 @@ const MainArtists = () => {
                 const elements = artistsNameRef.current.querySelectorAll('p');
                 const updatedVisible: Record<number, boolean> = {};
 
-                elements.forEach((p, index) => {
+                elements.forEach((data, index) => {
                     //getBoundingClientRect() dom요소의 크기와 위치계산하는 메서드
-                    const rect = p.getBoundingClientRect();
+                    const rect = data.getBoundingClientRect();
+                    console.log(rect,'렉트')
                     const isVisible =
                         rect.top >= 0 && rect.bottom <= window.innerHeight;
                     updatedVisible[index] = isVisible;
+                    console.log(isVisible,'이즈비지블')
                 });
                 setVisible(updatedVisible);
+                
             }
             setScrollY(window.scrollY);
         };
@@ -66,7 +66,7 @@ const MainArtists = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    // console.log(artistsNameRef,'알이에프')
     return (
         <MainArtistsStyled scrollY={scrollY}>
             <h1 ref={h1Ref}>Artists</h1>

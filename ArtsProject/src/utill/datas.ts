@@ -1304,7 +1304,7 @@ const datas = [
         artist: HwiyeonKim,
     },
     {
-        id: 73,
+        id: 74,
         title: 'Layers of Trace 3, 2024',
         price: 510900,
         size: '16 1/10 × 12 1/2 in | 40.9 × 31.8 cm',

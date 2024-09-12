@@ -17,20 +17,25 @@ interface ArtistData {
     title: string;
 }
 const Exhibition = () => {
+    //exhibition데이터를 map으로 돌려서 작가들 이름만 추출
     const exhibitionArtist = exhibition.map((data) => data.name.name);
-    // console.log(exhibitionArtist, 'ddd');
+
+    // exhibitionArtist작가들을 순회하면서 datas데이터에 동일한 작가의 작품 1개씩 저장 
     const uniqueArtists = exhibitionArtist.map((artistName) =>
         datas.find((data) => data.artist.name === artistName)
     );
-    // console.log(uniqueArtists, '유니크');
-    // 기본으로 첫 번째 아티스트의 데이터를 상태로 설정
+    console.log(uniqueArtists, '유니크');
+    // uniqueArtists중에서도 첫번째인덱스만 저장시켜놓음
     const [currentArtist, setCurrentArtist] = useState<ArtistData | null>(
         uniqueArtists[0] || null
     );
+
+
     const getExhibitionTitle = (artistName: string) => {
         const exhibitionData = exhibition.find(
             (data) => data.name.name === artistName
         );
+        // console.log(exhibitionData,'epdddf')
         return exhibitionData ? exhibitionData.title : 'Unknown Exhibition'; // 전시 제목이 없다면 기본값 'Unknown Exhibition'
     };
     // console.log(currentArtist, '커런ㅌ');

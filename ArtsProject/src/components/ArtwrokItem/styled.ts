@@ -8,7 +8,7 @@ export const ArtworkItemStyled = styled.div`
         overflow: hidden;
         display: flex;
         justify-content: center;
-
+        height: 70%;
         img {
             width: 100%;
             cursor: pointer;
@@ -19,9 +19,19 @@ export const ArtworkItemStyled = styled.div`
         }
     }
     .text {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         p {
             line-height: 1.5;
             cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width:300px;
         }
         p:nth-of-type(1) {
             font-weight: bold;
@@ -32,10 +42,9 @@ export const ArtworkItemStyled = styled.div`
         p:nth-of-type(3) {
             color: gray;
         }
-
     }
     .customLink {
-        text-decoration: none; 
+        text-decoration: none;
         color: inherit;
     }
 `;
