@@ -4,7 +4,7 @@ import Location from '../Location';
 import Image from 'next/image';
 
 const About = () => {
-    console.log(arts, '이미지경로확인');
+    // console.log(arts, '이미지경로확인');
     return (
         <AboutStyled>
             <div className="AboutTop">

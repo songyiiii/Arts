@@ -4,10 +4,12 @@ import MainArtists from '@/components/MainArtists';
 import CarouselWrap2 from '@/components/CarouselWrap2';
 import Exhibition from '@/components/\bExhibition';
 
+
 const MainPage = () => {
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const [visibleSections, setVisibleSections] = useState<Record<number, boolean>>({});
 
+    
     // 스크롤 이벤트 핸들러
     const handleScroll = () => {
         const updatedVisibleSections: Record<number, boolean> = {};

@@ -3,6 +3,7 @@ import { MainArtistsStyled } from './styled';
 import { artists, datas } from '@/utill/datas';
 import MainArtistsImg from '../MainArtistsImg';
 import MainArtistName from '../MainArtistsName';
+import { useRouter } from 'next/router';
 
 interface AnimationTimings {
     delay: string;
@@ -14,11 +15,15 @@ const MainArtists = () => {
     const [visible, setVisible] = useState<Record<number, boolean>>({});
     const [hoverName, setHoverName] = useState<string | null>(null);
     const [scrollY, setScrollY] = useState<number>(0);
-    const [animationTimings, setAnimationTimings] = useState<Record<number, AnimationTimings>>({});
-
+    const [animationTimings, setAnimationTimings] = useState<
+        Record<number, AnimationTimings>
+    >({});
+    const router = useRouter();
     // 아티스트 이름 hover 시 이미지 보여주기
     const NameHover = (artistName: string) => {
-        const artistData = datas.find((data) => data.artist.name === artistName);
+        const artistData = datas.find(
+            (data) => data.artist.name === artistName
+        );
         if (artistData) {
             setHoverName(artistData.src.src);
         }
@@ -29,12 +34,12 @@ const MainArtists = () => {
         const timings: Record<number, AnimationTimings> = {};
         artists.map((_, index) => {
             const delay = `${Math.random() * 4}s`;
-            timings[index] = {  delay };
+            timings[index] = { delay };
         });
-        setAnimationTimings(timings); 
+        setAnimationTimings(timings);
     }, []);
-    
-    console.log(animationTimings,'타이밍스')
+
+    // console.log(animationTimings,'타이밍스')
     // 스크롤 이벤트로 아티스트 이름 가시성 체크
     useEffect(() => {
         const handleScroll = () => {
@@ -45,35 +50,37 @@ const MainArtists = () => {
                 elements.forEach((p, index) => {
                     //getBoundingClientRect() dom요소의 크기와 위치계산하는 메서드
                     const rect = p.getBoundingClientRect();
-                    const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                    const isVisible =
+                        rect.top >= 0 && rect.bottom <= window.innerHeight;
                     updatedVisible[index] = isVisible;
                 });
-                setVisible(updatedVisible); 
+                setVisible(updatedVisible);
             }
             setScrollY(window.scrollY);
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); 
+        handleScroll();
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    // console.log(visible,'ㅣ비즙ㄹ')
 
     return (
         <MainArtistsStyled scrollY={scrollY}>
             <h1 ref={h1Ref}>Artists</h1>
-            <div className="flexBox" >
+            <div className="flexBox">
                 <MainArtistName
                     artists={artists}
                     visible={visible}
-                    animationTimings={animationTimings} 
+                    animationTimings={animationTimings}
                     onHover={NameHover}
                     ref={artistsNameRef}
                 />
-                <MainArtistsImg hoverName={hoverName} />
+                <MainArtistsImg
+                    hoverName={hoverName}
+                />
             </div>
         </MainArtistsStyled>
     );

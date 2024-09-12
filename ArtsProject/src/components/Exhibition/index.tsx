@@ -18,11 +18,11 @@ interface ArtistData {
 }
 const Exhibition = () => {
     const exhibitionArtist = exhibition.map((data) => data.name.name);
-    console.log(exhibitionArtist, 'ddd');
+    // console.log(exhibitionArtist, 'ddd');
     const uniqueArtists = exhibitionArtist.map((artistName) =>
         datas.find((data) => data.artist.name === artistName)
     );
-    console.log(uniqueArtists, '유니크');
+    // console.log(uniqueArtists, '유니크');
     // 기본으로 첫 번째 아티스트의 데이터를 상태로 설정
     const [currentArtist, setCurrentArtist] = useState<ArtistData | null>(
         uniqueArtists[0] || null
@@ -33,7 +33,7 @@ const Exhibition = () => {
         );
         return exhibitionData ? exhibitionData.title : 'Unknown Exhibition'; // 전시 제목이 없다면 기본값 'Unknown Exhibition'
     };
-    console.log(currentArtist, '커런ㅌ');
+    // console.log(currentArtist, '커런ㅌ');
     // hover 이벤트 발생 시 상태 업데이트
     const handleHover = (artistData: ArtistData) => {
         setCurrentArtist(artistData);

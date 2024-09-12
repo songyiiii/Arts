@@ -21,12 +21,12 @@ const ArtworkList = () => {
 
     const formik = useFormik({
         initialValues: {
-            search: '', 
-            sortOption: 'latest', 
+            search: '',
+            sortOption: 'latest',
         },
         onSubmit: (values) => {
-            setSearch(values.search); 
-            setCurrentPage(0); 
+            setSearch(values.search);
+            setCurrentPage(0);
         },
     });
     // console.log(selectCategory,'셀렉카테고리')
@@ -39,15 +39,13 @@ const ArtworkList = () => {
                 data.category !== selectCategory
             ) {
                 return false;
-            } 
+            }
             return (
                 data.title
-                //문자열 소문자로 변환
+                    //문자열 소문자로 변환
                     .toLowerCase()
                     .includes(search.toLowerCase()) ||
-                data.artist.name
-                    .toLowerCase()
-                    .includes(search.toLowerCase())
+                data.artist.name.toLowerCase().includes(search.toLowerCase())
             );
         })
         .sort((a, b) =>
@@ -60,13 +58,12 @@ const ArtworkList = () => {
                 : 0
         );
 
-
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    console.log(indexOfFirstItem,'펄스트')
-    console.log(indexOfLastItem,'라스트')
+    // console.log(indexOfFirstItem,'펄스트')
+    // console.log(indexOfLastItem,'라스트')
     const currentItems = filterData.slice(indexOfFirstItem, indexOfLastItem);
-    console.log(currentItems,'커런트')
+    // console.log(currentItems,'커런트')
 
     // 총 페이지 수 계산
     const pageCount = Math.ceil(filterData.length / itemsPerPage);
@@ -76,7 +73,9 @@ const ArtworkList = () => {
         setCurrentPage(selectedItem.selected); // 선택한 페이지로 이동
     };
 
-    function handleKeyPress(event: React.KeyboardEvent<HTMLInputElement>): void {
+    function handleKeyPress(
+        event: React.KeyboardEvent<HTMLInputElement>
+    ): void {
         if (event.key === 'Enter') {
             formik.handleSubmit(); // 엔터키를 누르면 폼 제출
         }
@@ -91,8 +90,8 @@ const ArtworkList = () => {
                     className={styles.input}
                     placeholder="Search by artist or title"
                     value={formik.values.search}
-                    onChange={formik.handleChange} 
-                    onKeyDown={handleKeyPress} 
+                    onChange={formik.handleChange}
+                    onKeyDown={handleKeyPress}
                 />
                 <Tooltip title="search" className={styles.button}>
                     <Button
@@ -104,7 +103,7 @@ const ArtworkList = () => {
                 <select
                     name="sortOption"
                     value={formik.values.sortOption}
-                    onChange={formik.handleChange} 
+                    onChange={formik.handleChange}
                     className={styles.select}
                 >
                     <option value="latest">최신순</option>
@@ -114,8 +113,8 @@ const ArtworkList = () => {
             </form>
 
             <ArtworkListStyled>
-                {currentItems.map((x, i) => {
-                    return (
+                {currentItems.length > 0 ? (
+                    currentItems.map((x, i) => (
                         <ArtworkItem
                             key={x.id}
                             title={x.title}
@@ -124,8 +123,10 @@ const ArtworkList = () => {
                             imgUrl={x.src.src}
                             id={x.id}
                         />
-                    );
-                })}
+                    ))
+                ) : (
+                    <p className='Instructions'>상품이 존재하지 않습니다.</p>
+                )}
             </ArtworkListStyled>
             <ReactPaginate
                 previousLabel={'<'}
