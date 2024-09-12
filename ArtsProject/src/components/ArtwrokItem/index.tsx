@@ -37,7 +37,7 @@ const ArtworkItem = ({
                         style={{
                             transformOrigin: `${position.x}% ${position.y}%`,
                         }}
-                        src={imgUrl} alt={title}                />
+                        src={imgUrl} alt={title} />
                 </div>
                 <div className="text">
                     <p>{artist}</p>

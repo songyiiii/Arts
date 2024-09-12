@@ -24,7 +24,6 @@ const Exhibition = () => {
     const uniqueArtists = exhibitionArtist.map((artistName) =>
         datas.find((data) => data.artist.name === artistName)
     );
-    console.log(uniqueArtists, '유니크');
     // uniqueArtists중에서도 첫번째인덱스만 저장시켜놓음
     const [currentArtist, setCurrentArtist] = useState<ArtistData | null>(
         uniqueArtists[0] || null

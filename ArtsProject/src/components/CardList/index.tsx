@@ -9,7 +9,6 @@ interface CardsProps {
 }
 
 const CardList = ({ imageSrc, galleryName, exhibitionName }: CardsProps) => {
-    const [hover, setHover] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const showModal = () => {
@@ -27,8 +26,6 @@ const CardList = ({ imageSrc, galleryName, exhibitionName }: CardsProps) => {
     return (
         <>
             <CardListStyled
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
                 onClick={showModal}
             >
                 {/* 첫 번째 슬라이드는 별도로 고정 */}
@@ -36,8 +33,8 @@ const CardList = ({ imageSrc, galleryName, exhibitionName }: CardsProps) => {
                     <img src={imageSrc} alt="Fixed Slide" className="image" />
                 </div>
                 {/* 슬라이드 안에 같은 이미지를 반복해서 넣음 */}
-                <div className={`slider ${hover ? 'hovered' : ''}`}>
-                    {Array(7)
+                <div className='slider'>
+                    {Array(9)
                         .fill(null)
                         .map((_, index) => (
                             <div className="slide" key={index}>

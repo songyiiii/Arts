@@ -11,7 +11,7 @@ import { useFormik } from 'formik';
 
 const ArtworkList = () => {
     //카테고리 저장
-    const [selectCategory, setSelectCategory] = useState<string | null>(null);
+    const [selectCategory, setSelectCategory] = useState<string>('all');
     //검색어 상태
     const [search, setSearch] = useState<string>('');
     //현재 페이지 상태 저장(첫번째페이지로 설정)
@@ -29,10 +29,9 @@ const ArtworkList = () => {
             setCurrentPage(0);
         },
     });
-    // console.log(selectCategory,'셀렉카테고리')
+
     const filterData = datas
         .filter((data) => {
-            // console.log(data.category,'데이터카테고리확인')
             if (
                 selectCategory &&
                 selectCategory !== 'all' &&
@@ -41,10 +40,7 @@ const ArtworkList = () => {
                 return false;
             }
             return (
-                data.title
-                    //문자열 소문자로 변환
-                    .toLowerCase()
-                    .includes(search.toLowerCase()) ||
+                data.title.toLowerCase().includes(search.toLowerCase()) ||
                 data.artist.name.toLowerCase().includes(search.toLowerCase())
             );
         })
@@ -60,10 +56,7 @@ const ArtworkList = () => {
 
     const indexOfLastItem = (currentPage + 1) * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    // console.log(indexOfFirstItem,'펄스트')
-    // console.log(indexOfLastItem,'라스트')
     const currentItems = filterData.slice(indexOfFirstItem, indexOfLastItem);
-    // console.log(currentItems,'커런트')
 
     // 총 페이지 수 계산
     const pageCount = Math.ceil(filterData.length / itemsPerPage);
@@ -125,7 +118,7 @@ const ArtworkList = () => {
                         />
                     ))
                 ) : (
-                    <p className='Instructions'>상품이 존재하지 않습니다.</p>
+                    <p className="Instructions">상품이 존재하지 않습니다.</p>
                 )}
             </ArtworkListStyled>
             <ReactPaginate

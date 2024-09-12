@@ -14,8 +14,8 @@ const CarouselWrap2 = () => {
                 navigation 
                 className="swiper"
                 autoplay={{
-                    delay: 4000, // 2초마다 슬라이드 넘기기
-                    disableOnInteraction: false, // 사용자가 슬라이드를 터치하거나 클릭해도 자동 넘김 유지
+                    delay: 4000,
+                    disableOnInteraction: false,
                 }}
             >
                 {slide?.map((x, i) => {

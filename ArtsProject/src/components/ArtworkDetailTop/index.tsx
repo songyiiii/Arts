@@ -36,7 +36,7 @@ const ArtworkDetailTop = ({ artwork }: artworkProps) => {
             <div className="imgBox">
                 <Image.PreviewGroup
                     preview={{
-                        zIndex: 10000000000, // header보다 높은 z-index 설정
+                        zIndex: 10000000000, 
                     }}
                 >
                     <Image src={artwork.src.src} alt={artwork.title} className='img'/>
