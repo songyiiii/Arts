@@ -23,8 +23,15 @@
 메인페이지
 
 
-![main_section1](https://github.com/user-attachments/assets/0254bae9-bd59-4619-b987-369bd3ca62a7)
-![main_section2](https://github.com/user-attachments/assets/57c2b58d-7583-40bf-8587-d151cdb5d315)
+| ![main_section1](https://github.com/user-attachments/assets/0254bae9-bd59-4619-b987-369bd3ca62a7) | ![main_section2](https://github.com/user-attachments/assets/57c2b58d-7583-40bf-8587-d151cdb5d315) |
+  
+
+
+
+  
+
+
+
 
 
 + swiper라이브러리를 이용해 슬라이드 구현
