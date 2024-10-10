@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const MainPageStyled = styled.div`
-    /* background-color: black; */
-    /* overflow-x: hidden; */
     background-color: black;
     overflow: hidden;
     padding: 0 30px;
@@ -36,5 +34,12 @@ export const MainPageStyled = styled.div`
         background-color: black;
         display: block;
         margin-bottom: 100px;
+    }
+    @media screen and (max-width: 480px) {
+        transform: translateY(10vh); 
+
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        transform: translateY(20vh); 
     }
 `;

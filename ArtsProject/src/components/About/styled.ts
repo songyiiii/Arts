@@ -70,7 +70,7 @@ export const AboutStyled = styled.div`
             .aboutText {
                 p {
                     line-height: 1.3;
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                 }
             }
         }
@@ -91,7 +91,7 @@ export const AboutStyled = styled.div`
             .aboutText {
                 p {
                     line-height: 1.4;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
             }
         }
