@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 export const CircleCardListStyled = styled.div`
-width: 100vw;
+display: flex;
+justify-content: center;
     @keyframes slideIn {
         from {
             opacity: 0;

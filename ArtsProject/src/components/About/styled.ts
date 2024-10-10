@@ -59,10 +59,10 @@ export const AboutStyled = styled.div`
             .imgBox {
                 .companyText {
                     h1 {
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                     }
                     h2 {
-                        font-size: 1rem;
+                        font-size: 1.5rem;
                     }
                 }
             }
@@ -80,7 +80,7 @@ export const AboutStyled = styled.div`
             .imgBox {
                 .companyText {
                     h1 {
-                        font-size: 2.5rem;
+                        font-size: 3rem;
                     }
                     h2 {
                         font-size: 2rem;
@@ -91,7 +91,7 @@ export const AboutStyled = styled.div`
             .aboutText {
                 p {
                     line-height: 1.4;
-                    font-size: 0.9rem;
+                    font-size: 1rem;
                 }
             }
         }

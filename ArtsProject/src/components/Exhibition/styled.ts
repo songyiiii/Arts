@@ -4,7 +4,10 @@ export const ExhibitionStyled = styled.div`
     overflow: hidden;
     text-align: center;
     position: relative;
-    width: 100vw;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1 {
         background: linear-gradient(
             to bottom,
@@ -14,6 +17,8 @@ export const ExhibitionStyled = styled.div`
         -webkit-background-clip: text;
         color: transparent; /* 텍스트 자체를 투명하게 만들고, 배경 그라데이션이 보이도록 함 */
         background-clip: text;
+        box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+
     }
     .bgBox {
         display: flex;
@@ -30,7 +35,8 @@ export const ExhibitionStyled = styled.div`
         color: black;
     }
     @media screen and (max-width: 480px) {
-        font-size: 1.5rem;
+
+        font-size: 1.2rem;
     }
     @media screen and (min-width: 481px) and (max-width: 768px) {
         h1 {

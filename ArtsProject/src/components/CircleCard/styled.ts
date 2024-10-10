@@ -5,7 +5,6 @@ display: flex;
 margin-top: 50px;
 justify-content: center;
 align-items: center;
-width: 100vw;
 @media screen and (max-width: 480px) {
 
     }

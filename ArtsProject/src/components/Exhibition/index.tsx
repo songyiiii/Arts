@@ -43,7 +43,7 @@ const Exhibition = () => {
         setCurrentArtist(artistData);
     };
     return (
-        <div style={{width:'100vh'}}>
+        <div>
             {currentArtist && (
                 <ExhibitionStyled>
                     <h1>EXHIBITION</h1>

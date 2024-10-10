@@ -40,7 +40,7 @@ export const MainArtistsStyled = styled.div<MainArtistsStyledProps>`
                 ${(props) => `scale(${1 + props.scrollY / 1000})`};
             top: 50%;
             left: 50%;
-            font-size:7rem;
+            font-size:3rem;
         }
     }
     @media screen and (min-width: 481px) and (max-width: 768px) {
