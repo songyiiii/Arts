@@ -43,7 +43,7 @@ const Exhibition = () => {
         setCurrentArtist(artistData);
     };
     return (
-        <>
+        <div style={{width:'100vh'}}>
             {currentArtist && (
                 <ExhibitionStyled>
                     <h1>EXHIBITION</h1>
@@ -63,7 +63,7 @@ const Exhibition = () => {
 
             {/* CircleCard에서 hover된 아티스트 데이터를 CardList로 전달 */}
             <CircleCard onHover={handleHover} uniqueArtists={uniqueArtists} />
-        </>
+        </div>
     );
 };
 export default Exhibition;

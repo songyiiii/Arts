@@ -26,6 +26,7 @@ export const CardListStyled = styled.div`
             position: relative;
             cursor: pointer;
             img {
+                width: 100%;
                 transition: transform 1.5s ease;
             }
         }
@@ -65,6 +66,24 @@ export const CardListStyled = styled.div`
             &:nth-of-type(2) {
                 background-color: gray;
             }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        width: 60%;
+        p {
+            font-size: 1.2rem;
+        }
+        img {
+            width: 100%;
         }
     }
 `;

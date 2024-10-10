@@ -13,10 +13,16 @@ export const MainAristImgStyled = styled.div`
     }
     @media screen and (max-width: 480px) {
         width: 100%;
-        height: 50%;
+        height: 70vh;
+        img {
+            width: 100%;
+        }
     }
     @media screen and (min-width: 481px) and (max-width: 768px) {
         width: 100%;
-        height: 50%;
+        height: 60vh;
+        img {
+            width: 100%;
+        }
     }
 `;

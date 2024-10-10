@@ -14,9 +14,9 @@ export const ArtworkItemStyled = styled.div`
             cursor: pointer;
             transition: transform 0.2s ease-in-out;
         }
-        img:hover {
+        /* img:hover {
             transform: scale(2);
-        }
+        } */
     }
     .text {
         height: 30%;
@@ -31,7 +31,7 @@ export const ArtworkItemStyled = styled.div`
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            width:300px;
+            width: 300px;
         }
         p:nth-of-type(1) {
             font-weight: bold;
@@ -46,5 +46,10 @@ export const ArtworkItemStyled = styled.div`
     .customLink {
         text-decoration: none;
         color: inherit;
+    }
+    @media screen and (min-width: 480px) {
+        .img img:hover {
+            transform: scale(2);
+        }
     }
 `;

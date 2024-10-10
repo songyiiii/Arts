@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 export const CircleCardListStyled = styled.div`
+width: 100vw;
     @keyframes slideIn {
         from {
             opacity: 0;
@@ -15,16 +16,20 @@ export const CircleCardListStyled = styled.div`
         position: relative;
         animation: slideIn 1s ease-out;
         .listImg {
-            border: 5px solid #000; 
+            border: 5px solid #000;
             width: 100%;
             img {
                 width: 100%;
                 cursor: pointer;
             }
-            img:hover{
+            img:hover {
                 opacity: 0.5;
                 transition: 0.5s;
             }
         }
+    }
+    @media screen and (max-width: 480px) {
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
     }
 `;

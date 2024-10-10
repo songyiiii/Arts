@@ -4,11 +4,8 @@ export const ExhibitionStyled = styled.div`
     overflow: hidden;
     text-align: center;
     position: relative;
+    width: 100vw;
     h1 {
-        /* color: white;
-        font-size: 5rem;
-        z-index: 1000;
-        -webkit-text-stroke: 2px black; */
         background: linear-gradient(
             to bottom,
             white,
@@ -31,5 +28,13 @@ export const ExhibitionStyled = styled.div`
         background-color: white;
         z-index: -10;
         color: black;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 1.5rem;
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        h1 {
+            font-size: 4rem;
+        }
     }
 `;

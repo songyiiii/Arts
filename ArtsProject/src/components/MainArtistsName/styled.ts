@@ -8,7 +8,7 @@ export const MainAristNameStyled = styled.div`
     flex-wrap: wrap;
     overflow: scroll;
     &::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera에서 스크롤바 숨기기 */
+        display: none;
     }
     p {
         margin-right: 30px;
@@ -39,10 +39,18 @@ export const MainAristNameStyled = styled.div`
     }
     @media screen and (max-width: 480px) {
         width: 100%;
-        height: 50%;
+        height: 30%;
+        overflow: scroll;
+        p {
+            font-size: 0.9rem;
+        }
     }
     @media screen and (min-width: 481px) and (max-width: 768px) {
         width: 100%;
-        height: 50%;
+        height:40vh;
+        overflow: scroll;
+        p{
+            font-size: 1rem;
+        }
     }
 `;
