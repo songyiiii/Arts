@@ -22,13 +22,14 @@ export const CarouselWrap2Styled = styled.div`
             color: white;
             text-align: left;
             img {
-                width: 50%;
-                height: 35%;
+                width: 100%;
+                height: 100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 transition: all 2s ease;
+                object-fit: cover;
             }
             .textBox1,
             .textBox2 {
@@ -92,4 +93,14 @@ export const CarouselWrap2Styled = styled.div`
         align-items: center;
         cursor: pointer;
     }
+    /* @media screen and (max-width: 480px) {
+        .swiper {
+            height: 80vh;
+        }
+    }
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        .swiper {
+            height: 80vh;
+        }
+    } */
 `;
