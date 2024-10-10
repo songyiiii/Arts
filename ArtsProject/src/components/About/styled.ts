@@ -27,30 +27,23 @@ export const AboutStyled = styled.div`
                 border-radius: 30px 0 0 0;
                 width: 80% !important;
             }
-            h1 {
-                font-size: 5rem;
-            }
-            h2 {
-                font-size: 4rem;
-            }
-            h1,
-            h2 {
+            .companyText {
                 position: absolute;
                 color: white;
                 background: linear-gradient(to right, black, white);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-            }
-            h1 {
                 width: 100%;
-                top: 70%;
+                top: 90%;
                 left: 0%;
-                transform: translate(-50%-50%);
-            }
-            h2 {
-                width: 100%;
-                bottom: 0;
-                line-height: 0.9;
+                transform: translateY(-90%);
+                h1 {
+                    font-size: 5rem;
+                }
+                h2 {
+                    font-size: 4rem;
+                    white-space: nowrap;
+                }
             }
         }
         .aboutText {
@@ -64,15 +57,20 @@ export const AboutStyled = styled.div`
     @media screen and (max-width: 480px) {
         .AboutTop {
             .imgBox {
-                h1,
-                h2 {
-                    font-size: 3rem;
+                .companyText {
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+                    h2 {
+                        font-size: 1rem;
+                    }
                 }
             }
+
             .aboutText {
                 p {
                     line-height: 1.3;
-                    font-size: 0.9rem;
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -80,18 +78,20 @@ export const AboutStyled = styled.div`
     @media screen and (min-width: 481px) and (max-width: 768px) {
         .AboutTop {
             .imgBox {
-                h1 {
-                    top: 65%;
-                    font-size: 3rem;
-                }
-                h2 {
-                    font-size: 2rem;
+                .companyText {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                    }
                 }
             }
+
             .aboutText {
                 p {
                     line-height: 1.4;
-                    font-size: 1rem;
+                    font-size: 0.9rem;
                 }
             }
         }
